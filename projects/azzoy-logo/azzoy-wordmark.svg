@@ -1,0 +1,15 @@
+<svg viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AZZOY">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&amp;display=swap');
+      .wordmark {
+        font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+        font-weight: 300;
+        font-size: 48px;
+        letter-spacing: 0.38em;
+        fill: #0D0D0D;
+      }
+    </style>
+  </defs>
+  <text class="wordmark" x="210" y="46" text-anchor="middle" dominant-baseline="auto">AZZOY</text>
+</svg>
