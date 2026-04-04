@@ -1,0 +1,9 @@
+<svg viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="AZZOY house mark">
+  <!-- The Gate — AZZOY house mark
+       A geometric form drawn from two converging strokes and a single crossbar.
+       The apex: precise, like a needle point. The base: open, monumental.
+       Proportions reference the classical A-form at its most essential.
+  -->
+  <path d="M 4,92 L 40,8 L 76,92" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+  <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square"/>
+</svg>

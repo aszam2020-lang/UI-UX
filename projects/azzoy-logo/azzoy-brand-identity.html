@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AZZOY — Brand Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #0D0D0D;
+      --bone:   #F7F4EF;
+      --stone:  #8C867E;
+      --rule:   #D5CFC7;
+      --white:  #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bone);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ─── LAYOUT ─────────────────────────────────────────── */
+
+    section {
+      padding: 100px 80px;
+    }
+
+    .full {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--rule);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+      background: var(--rule);
+    }
+
+    .cell {
+      padding: 72px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .cell-left {
+      align-items: flex-start;
+    }
+
+    /* ─── TYPE ────────────────────────────────────────────── */
+
+    .label {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 400;
+      font-family: 'Cormorant Garamond', sans-serif;
+    }
+
+    .caption {
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: var(--stone);
+      line-height: 1.7;
+      max-width: 320px;
+      font-style: italic;
+    }
+
+    .spec-key {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    .spec-val {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+    }
+
+    .spec-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-top: 1px solid var(--rule);
+      padding-top: 16px;
+    }
+
+    hr.rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      width: 100%;
+    }
+
+    /* ─── THE WORDMARK ────────────────────────────────────── */
+
+    .wordmark {
+      font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+      font-weight: 300;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: inherit;
+      display: block;
+      text-indent: 0.38em; /* optical compensation for trailing spacing */
+    }
+
+    .wm-hero   { font-size: clamp(52px, 8vw, 96px); }
+    .wm-large  { font-size: 64px; }
+    .wm-medium { font-size: 42px; }
+    .wm-small  { font-size: 26px; }
+    .wm-xs     { font-size: 16px; }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 13px;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.2em;
+      color: var(--stone);
+    }
+
+    /* ─── THE SYMBOL (SVG inline) ─────────────────────────── */
+
+    .symbol svg {
+      display: block;
+    }
+
+    /* ─── COLOR SWATCHES ──────────────────────────────────── */
+
+    .swatch-row {
+      display: flex;
+      gap: 0;
+    }
+
+    .swatch {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swatch-block {
+      width: 120px;
+      height: 80px;
+    }
+
+    .swatch-info {
+      padding: 12px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    /* ─── DARK SECTIONS ───────────────────────────────────── */
+
+    .dark {
+      background: var(--ink);
+      color: var(--bone);
+    }
+
+    .dark .label { color: #5A5550; }
+    .dark .caption { color: #8C867E; }
+    .dark .rule { border-color: #2A2520; }
+    .dark .spec-key { color: #5A5550; }
+    .dark .spec-val { color: var(--bone); }
+    .dark .spec-row { border-color: #2A2520; }
+    .dark .swatch-info .label { color: #5A5550; }
+    .dark .swatch-info .spec-val { color: #8C867E; }
+
+    .white-bg {
+      background: var(--white);
+    }
+
+    /* ─── COMBINATION MARK ────────────────────────────────── */
+
+    .combo-stacked {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .combo-horizontal {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .combo-divider {
+      width: 1px;
+      height: 44px;
+      background: currentColor;
+      opacity: 0.25;
+    }
+
+    /* ─── SCALE DEMO ──────────────────────────────────────── */
+
+    .scale-row {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .scale-item {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      border-top: 1px solid var(--rule);
+      padding-top: 24px;
+      width: 100%;
+    }
+
+    .scale-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--stone);
+      min-width: 80px;
+    }
+
+    /* ─── INTRO SECTION ───────────────────────────────────── */
+
+    .intro-line {
+      width: 1px;
+      height: 60px;
+      background: var(--stone);
+      opacity: 0.4;
+      margin: 24px auto;
+    }
+
+    /* ─── SECTION HEADER ──────────────────────────────────── */
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .section-header .label {
+      white-space: nowrap;
+    }
+
+    .section-header hr {
+      flex: 1;
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ─── LOCKUP OPTIONS ──────────────────────────────────── */
+
+    .lockup-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       01 — HERO
+  ══════════════════════════════════════════════════ -->
+  <section class="full dark" style="text-align:center; gap: 0;">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+
+      <!-- The Gate symbol, white on dark -->
+      <svg viewBox="0 0 80 100" width="56" xmlns="http://www.w3.org/2000/svg" fill="none" style="margin-bottom: 36px;">
+        <path d="M 4,92 L 40,8 L 76,92" stroke="#F7F4EF" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+        <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#F7F4EF" stroke-width="2.6" stroke-linecap="square"/>
+      </svg>
+
+      <span class="wordmark wm-hero" style="color: #F7F4EF;">AZZOY</span>
+
+      <div class="intro-line"></div>
+
+      <p class="tagline">Egypt &thinsp;&mdash;&thinsp; The World</p>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       02 — THE SYMBOL
+  ══════════════════════════════════════════════════ -->
+  <section class="white-bg">
+    <div class="section-header">
+      <span class="label">02 &ensp; The Symbol</span>
+      <hr>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
+
+      <!-- Symbol large -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:48px;">
+        <svg viewBox="0 0 80 100" width="200" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M 4,92 L 40,8 L 76,92" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+          <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square"/>
+        </svg>
+
+        <!-- Symbol at small sizes -->
+        <div style="display:flex; gap:40px; align-items:center;">
+          <svg viewBox="0 0 80 100" width="80" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M 4,92 L 40,8 L 76,92" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+            <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square"/>
+          </svg>
+          <svg viewBox="0 0 80 100" width="48" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M 4,92 L 40,8 L 76,92" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+            <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square"/>
+          </svg>
+          <svg viewBox="0 0 80 100" width="28" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M 4,92 L 40,8 L 76,92" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+            <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square"/>
+          </svg>
+          <svg viewBox="0 0 80 100" width="18" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M 4,92 L 40,8 L 76,92" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+            <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div style="display:flex; flex-direction:column; gap:32px; padding-top:16px;">
+        <div>
+          <p class="label" style="margin-bottom:12px;">The Gate</p>
+          <p class="caption" style="font-style:normal; line-height:1.9; color: #4A4540; max-width:360px; font-size:15px;">
+            A geometric construction from two converging strokes and a single crossbar.
+            The form reads as an architectural gateway — monumental in proportion, precise in execution.
+            The apex is a point. There is nothing unnecessary in it.
+          </p>
+        </div>
+        <hr class="rule">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div class="spec-row">
+            <span class="spec-key">Canvas</span>
+            <span class="spec-val">4 : 5 ratio — 80 × 100 units</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Stroke weight</span>
+            <span class="spec-val">2.6 pt at reference size</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Line termination</span>
+            <span class="spec-val">Square cap — architectural, definite</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Crossbar position</span>
+            <span class="spec-val">40.5% from apex — classical A proportion</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Apex join</span>
+            <span class="spec-val">Miter, limit 20 — sharp, precise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       03 — THE WORDMARK
+  ══════════════════════════════════════════════════ -->
+  <section style="background: var(--bone);">
+    <div class="section-header">
+      <span class="label">03 &ensp; The Wordmark</span>
+      <hr>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:80px;">
+
+      <!-- Primary wordmark -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:24px; padding: 80px 0;">
+        <span class="wordmark wm-large">AZZOY</span>
+      </div>
+
+      <hr class="rule">
+
+      <!-- Type specification -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:48px;">
+        <div class="spec-row" style="border-top:none; padding-top:0;">
+          <span class="spec-key" style="margin-bottom:8px;">Typeface</span>
+          <span class="spec-val" style="font-size:18px;">Cormorant Garamond</span>
+          <span class="caption" style="font-style:normal; color:#8C867E; font-size:12px; margin-top:4px; letter-spacing:0.05em;">
+            A typeface cut with the contrast and refinement of the great historical Garamonds.
+            Light weight at primary scale.
+          </span>
+        </div>
+        <div class="spec-row" style="border-top:none; padding-top:0;">
+          <span class="spec-key" style="margin-bottom:8px;">Weight</span>
+          <span class="spec-val" style="font-size:18px;">300 — Light</span>
+          <span class="caption" style="font-style:normal; color:#8C867E; font-size:12px; margin-top:4px; letter-spacing:0.05em;">
+            Regular weight (400) for small applications below 20px.
+          </span>
+        </div>
+        <div class="spec-row" style="border-top:none; padding-top:0;">
+          <span class="spec-key" style="margin-bottom:8px;">Letter spacing</span>
+          <span class="spec-val" style="font-size:18px;">0.38em</span>
+          <span class="caption" style="font-style:normal; color:#8C867E; font-size:12px; margin-top:4px; letter-spacing:0.05em;">
+            Generous but not theatrical. The word breathes. It does not shout.
+          </span>
+        </div>
+      </div>
+
+      <hr class="rule">
+
+      <!-- The double Z -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <span class="label">The Double Z</span>
+        <div style="display:flex; align-items:baseline; gap:0;">
+          <span class="wordmark" style="font-size:120px; letter-spacing:0.1em; opacity:0.08;">A</span>
+          <span class="wordmark" style="font-size:120px; letter-spacing:0.1em; opacity:1; color:#0D0D0D;">ZZ</span>
+          <span class="wordmark" style="font-size:120px; letter-spacing:0.1em; opacity:0.08;">OY</span>
+        </div>
+        <p class="caption" style="font-style:normal; font-size:14px; color:#4A4540; line-height:1.8; max-width:520px;">
+          The consecutive Z's are not a challenge to be solved — they are the visual signature of the house.
+          In Cormorant Garamond, the Z carries a fine diagonal that creates inherent movement and tension.
+          Two together produce a visual energy that the rest of the word — the open O and the branching Y — resolves.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       04 — COMBINATION MARKS
+  ══════════════════════════════════════════════════ -->
+  <section class="white-bg">
+    <div class="section-header">
+      <span class="label">04 &ensp; Combination Marks</span>
+      <hr>
+    </div>
+
+    <div class="grid-2" style="background: var(--rule);">
+
+      <!-- Stacked: Primary -->
+      <div class="cell" style="background: var(--white);">
+        <div class="combo-stacked">
+          <svg viewBox="0 0 80 100" width="52" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M 4,92 L 40,8 L 76,92" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+            <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square"/>
+          </svg>
+          <span class="wordmark wm-medium">AZZOY</span>
+        </div>
+        <p class="lockup-label">Primary — Stacked</p>
+      </div>
+
+      <!-- Horizontal lockup -->
+      <div class="cell" style="background: var(--white);">
+        <div class="combo-horizontal">
+          <svg viewBox="0 0 80 100" width="36" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M 4,92 L 40,8 L 76,92" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+            <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#0D0D0D" stroke-width="2.6" stroke-linecap="square"/>
+          </svg>
+          <div class="combo-divider"></div>
+          <span class="wordmark" style="font-size:28px;">AZZOY</span>
+        </div>
+        <p class="lockup-label">Horizontal — with rule</p>
+      </div>
+
+      <!-- Wordmark alone: bone bg -->
+      <div class="cell" style="background: var(--bone);">
+        <span class="wordmark wm-medium">AZZOY</span>
+        <p class="lockup-label">Wordmark — Bone ground</p>
+      </div>
+
+      <!-- Symbol alone: dark bg -->
+      <div class="cell" style="background: var(--ink);">
+        <svg viewBox="0 0 80 100" width="64" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M 4,92 L 40,8 L 76,92" stroke="#F7F4EF" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+          <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#F7F4EF" stroke-width="2.6" stroke-linecap="square"/>
+        </svg>
+        <p class="lockup-label" style="color:#5A5550;">Symbol — Ink ground</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       05 — COLOUR SYSTEM
+  ══════════════════════════════════════════════════ -->
+  <section style="background: var(--bone);">
+    <div class="section-header">
+      <span class="label">05 &ensp; Colour System</span>
+      <hr>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:60px;">
+
+      <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1px; background: var(--rule);">
+        <!-- Ink -->
+        <div style="background: var(--bone);">
+          <div style="height:120px; background:#0D0D0D;"></div>
+          <div style="padding:20px 0;">
+            <p class="label" style="margin-bottom:6px;">Ink</p>
+            <p class="spec-val" style="font-size:13px;">#0D0D0D</p>
+            <p class="caption" style="font-style:normal; font-size:11px; margin-top:4px;">Primary — near black, warm undertone</p>
+          </div>
+        </div>
+        <!-- Bone -->
+        <div style="background: var(--bone);">
+          <div style="height:120px; background:#F7F4EF; border: 1px solid #E0DAD3;"></div>
+          <div style="padding:20px 0;">
+            <p class="label" style="margin-bottom:6px;">Bone</p>
+            <p class="spec-val" style="font-size:13px;">#F7F4EF</p>
+            <p class="caption" style="font-style:normal; font-size:11px; margin-top:4px;">Ground — warmed white, Egyptian sun</p>
+          </div>
+        </div>
+        <!-- Stone -->
+        <div style="background: var(--bone);">
+          <div style="height:120px; background:#8C867E;"></div>
+          <div style="padding:20px 0;">
+            <p class="label" style="margin-bottom:6px;">Stone</p>
+            <p class="spec-val" style="font-size:13px;">#8C867E</p>
+            <p class="caption" style="font-style:normal; font-size:11px; margin-top:4px;">Secondary — for captions and metadata</p>
+          </div>
+        </div>
+        <!-- Rule -->
+        <div style="background: var(--bone);">
+          <div style="height:120px; background:#D5CFC7;"></div>
+          <div style="padding:20px 0;">
+            <p class="label" style="margin-bottom:6px;">Rule</p>
+            <p class="spec-val" style="font-size:13px;">#D5CFC7</p>
+            <p class="caption" style="font-style:normal; font-size:11px; margin-top:4px;">Divider — hairlines, borders, structure</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px; max-width:560px;">
+        <span class="label">Colour philosophy</span>
+        <p style="font-size:15px; line-height:1.9; color:#4A4540; margin-top:8px;">
+          The palette contains no gold. Gold is the shorthand for luxury that serious luxury does not need.
+          The warmth is in the white — a bone that has been in the Egyptian sun. The black is not cold —
+          it carries a trace of warm undertone. These are not neutral colours. They are considered ones.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       06 — REVERSED APPLICATIONS
+  ══════════════════════════════════════════════════ -->
+  <section class="dark">
+    <div class="section-header">
+      <span class="label" style="color:#5A5550;">06 &ensp; Reversed Applications</span>
+      <hr style="border-color:#2A2520;">
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:1px; background:#2A2520;">
+
+      <!-- Stacked reversed -->
+      <div class="cell" style="background: var(--ink);">
+        <div class="combo-stacked">
+          <svg viewBox="0 0 80 100" width="44" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M 4,92 L 40,8 L 76,92" stroke="#F7F4EF" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+            <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#F7F4EF" stroke-width="2.6" stroke-linecap="square"/>
+          </svg>
+          <span class="wordmark" style="font-size:32px; color:#F7F4EF;">AZZOY</span>
+        </div>
+        <p class="lockup-label" style="color:#5A5550;">Bone on Ink</p>
+      </div>
+
+      <!-- Wordmark alone on dark -->
+      <div class="cell" style="background: #1A1614;">
+        <span class="wordmark wm-medium" style="color:#F7F4EF;">AZZOY</span>
+        <p class="lockup-label" style="color:#444038;">Wordmark only — deep ground</p>
+      </div>
+
+      <!-- Horizontal reversed -->
+      <div class="cell" style="background: var(--ink);">
+        <div class="combo-horizontal">
+          <svg viewBox="0 0 80 100" width="32" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M 4,92 L 40,8 L 76,92" stroke="#F7F4EF" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="20"/>
+            <line x1="24.5" y1="44" x2="55.5" y2="44" stroke="#F7F4EF" stroke-width="2.6" stroke-linecap="square"/>
+          </svg>
+          <div class="combo-divider" style="background:#F7F4EF;"></div>
+          <span class="wordmark" style="font-size:26px; color:#F7F4EF;">AZZOY</span>
+        </div>
+        <p class="lockup-label" style="color:#5A5550;">Horizontal — dark ground</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       07 — SCALE
+  ══════════════════════════════════════════════════ -->
+  <section class="white-bg">
+    <div class="section-header">
+      <span class="label">07 &ensp; Scale</span>
+      <hr>
+    </div>
+
+    <div class="scale-row">
+      <div class="scale-item">
+        <span class="scale-label">Hero / Cover</span>
+        <span class="wordmark" style="font-size:88px;">AZZOY</span>
+      </div>
+      <div class="scale-item">
+        <span class="scale-label">Campaign</span>
+        <span class="wordmark" style="font-size:56px;">AZZOY</span>
+      </div>
+      <div class="scale-item">
+        <span class="scale-label">Masthead</span>
+        <span class="wordmark" style="font-size:36px;">AZZOY</span>
+      </div>
+      <div class="scale-item">
+        <span class="scale-label">Label</span>
+        <span class="wordmark" style="font-size:22px; font-weight:400;">AZZOY</span>
+      </div>
+      <div class="scale-item">
+        <span class="scale-label">Minimum</span>
+        <span class="wordmark" style="font-size:14px; font-weight:400; letter-spacing:0.28em;">AZZOY</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       08 — SYSTEM PRINCIPLES
+  ══════════════════════════════════════════════════ -->
+  <section style="background: var(--bone);">
+    <div class="section-header">
+      <span class="label">08 &ensp; System Principles</span>
+      <hr>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:60px 100px;">
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <span class="label">The mark does not explain itself</span>
+        <p style="font-size:15px; line-height:1.9; color:#4A4540;">
+          There is no Egypt in the symbol. There is no cotton in the colour. There is no founder
+          in the monogram. The identity is a construction of proportion and restraint —
+          it earns its associations rather than announcing them.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <span class="label">Wordmark takes precedence</span>
+        <p style="font-size:15px; line-height:1.9; color:#4A4540;">
+          In the hierarchy of the identity system, the wordmark is primary.
+          The symbol is a house mark — for garment labels, packaging seals,
+          embossing. It supports the word. It does not replace it.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <span class="label">No gold. No gradients. No effects</span>
+        <p style="font-size:15px; line-height:1.9; color:#4A4540;">
+          The identity is two colours. It does not require metallics,
+          embossing effects in digital contexts, or texture to communicate quality.
+          Those come in the physical materials — the paper, the cloth,
+          the box — not in the mark.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <span class="label">Space is the luxury</span>
+        <p style="font-size:15px; line-height:1.9; color:#4A4540;">
+          The wordmark requires generous clear space on all sides —
+          a minimum of the cap height of the wordmark on every edge.
+          In practice, more. Crowding the mark is the first sign
+          that something has gone wrong.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       09 — CLOSE
+  ══════════════════════════════════════════════════ -->
+  <section class="full dark" style="gap:0; min-height:60vh;">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+      <span class="wordmark" style="font-size:22px; color:#F7F4EF; letter-spacing:0.45em; font-weight:400;">AZZOY</span>
+      <div style="width:1px; height:48px; background:#3A3530; margin:28px auto;"></div>
+      <p class="caption" style="text-align:center; color:#5A5550; letter-spacing:0.15em; font-style:normal; font-size:11px; text-transform:uppercase;">
+        Egypt &ensp;&bull;&ensp; The World
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
