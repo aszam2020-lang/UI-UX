@@ -4,119 +4,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AZZOY — Brand Manual</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--night:#1a1714;--sand:#c4a882;--cream:#f0ebe0;--white:#faf7f2;--linen:#e8e0d4;--char:#3d3832;--clay:#9c6b4a;--dusk:#8a7e6d;--saffron:#c49a6c;--fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',-apple-system,sans-serif}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--fb);font-weight:300;color:var(--night);background:var(--white);line-height:1.8}
-.s{padding:120px 40px}
-.sd{background:var(--night);color:var(--cream)}
-.sl{background:var(--white);color:var(--night)}
-.sc{background:var(--cream);color:var(--night)}
-.ss{background:var(--sand);color:var(--night)}
-.c{max-width:1100px;margin:0 auto}
-.lab{font-family:var(--fb);font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.25em;opacity:.4;margin-bottom:48px}
-h2{font-family:var(--fd);font-weight:700;font-size:clamp(32px,5vw,52px);line-height:1.15;margin-bottom:40px}
-h3{font-family:var(--fd);font-weight:600;font-size:clamp(20px,3vw,28px);line-height:1.3;margin-bottom:20px}
-.bt{font-size:16px;line-height:1.85;max-width:640px;opacity:.75}
-.wm{font-family:var(--fd);font-weight:700;letter-spacing:.3em}
-.div{width:48px;height:1px;background:currentColor;opacity:.2;margin:48px 0}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
-.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:24px}
-@media(max-width:800px){.g2,.g3,.g4{grid-template-columns:1fr}}
-.mono svg line{stroke-linecap:square}
+:root {
+  --night: #1C1917;
+  --stone: #A8967A;
+  --cream: #F2EDE4;
+  --parchment: #FAF8F4;
+  --linen: #E6DFD3;
+  --ash: #4A4540;
+  --clay: #8B7355;
+  --dusk: #706A5E;
+  --saffron: #B8976A;
+  --fd: 'Cormorant Garamond', 'Georgia', serif;
+  --fb: 'Inter', -apple-system, sans-serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: var(--fb); font-weight: 300; color: var(--night); background: var(--parchment); line-height: 1.8; }
+
+/* Layout */
+.s { padding: 128px 48px; }
+.sd { background: var(--night); color: var(--cream); }
+.sl { background: var(--parchment); color: var(--night); }
+.sc { background: var(--cream); color: var(--night); }
+.c { max-width: 1080px; margin: 0 auto; }
+@media (max-width: 800px) { .s { padding: 80px 24px; } }
+
+/* Type */
+.lab { font-family: var(--fb); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .3em; opacity: .35; margin-bottom: 56px; }
+h2 { font-family: var(--fd); font-weight: 400; font-size: clamp(30px, 4.5vw, 48px); line-height: 1.2; margin-bottom: 40px; letter-spacing: .01em; }
+h3 { font-family: var(--fd); font-weight: 400; font-size: clamp(20px, 2.8vw, 26px); line-height: 1.35; margin-bottom: 20px; }
+.bt { font-size: 15px; line-height: 1.9; max-width: 620px; opacity: .7; }
+.wm { font-family: var(--fd); font-weight: 600; letter-spacing: .25em; }
+.hr { width: 40px; height: 1px; background: currentColor; opacity: .15; margin: 48px 0; }
+
+/* Grids */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+.g4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+@media (max-width: 800px) { .g2, .g3, .g4 { grid-template-columns: 1fr; } }
 
 /* Cover */
-.cover{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--night);color:var(--cream);padding:60px 24px}
-.cover-wm{font-size:clamp(56px,14vw,140px);margin-bottom:32px}
-.cover-sub{font-family:var(--fb);font-size:13px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;opacity:.4;margin-bottom:12px}
-.cover-line{width:48px;height:1px;background:var(--cream);opacity:.15;margin:28px auto}
+.cover { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: var(--night); color: var(--cream); padding: 60px 32px; }
 
 /* Cards */
-.card{border-radius:8px;overflow:hidden;transition:transform .3s ease}
-.card:hover{transform:translateY(-2px)}
+.card { border-radius: 6px; transition: transform .35s ease; }
+.card:hover { transform: translateY(-2px); }
 
-/* Quote */
-.quote{border-left:3px solid var(--sand);padding:24px 0 24px 32px;font-family:var(--fd);font-size:clamp(17px,2.5vw,20px);font-weight:400;line-height:1.8;max-width:680px;opacity:.85}
+/* Quote block */
+.quote { border-left: 2px solid var(--stone); padding: 20px 0 20px 28px; font-family: var(--fd); font-size: clamp(16px, 2.2vw, 19px); font-weight: 400; line-height: 1.85; max-width: 640px; opacity: .8; }
 
-/* Values row */
-.val{text-align:center;padding:32px 16px}
-.val-num{font-family:var(--fd);font-size:48px;font-weight:700;color:var(--sand);margin-bottom:8px}
-.val-title{font-family:var(--fd);font-size:18px;font-weight:600;margin-bottom:8px}
-.val-desc{font-size:13px;opacity:.55;line-height:1.6}
+/* Values */
+.val { padding: 28px 0; }
+.val-num { font-family: var(--fd); font-size: 36px; font-weight: 300; color: var(--stone); margin-bottom: 4px; }
+.val-title { font-family: var(--fd); font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+.val-desc { font-size: 13px; opacity: .5; line-height: 1.6; }
 
-/* Swatch */
-.sw{height:100px;border-radius:6px;display:flex;align-items:flex-end;padding:12px 16px}
-.sw span{font-size:11px;font-weight:500;letter-spacing:.05em}
-.sws{height:64px;border-radius:6px;display:flex;align-items:flex-end;padding:8px 12px}
-.sws span{font-size:10px;letter-spacing:.04em}
+/* Swatches */
+.sw { height: 88px; border-radius: 4px; display: flex; align-items: flex-end; padding: 10px 14px; }
+.sw span { font-size: 11px; font-weight: 400; letter-spacing: .03em; }
+.sws { height: 56px; border-radius: 4px; display: flex; align-items: flex-end; padding: 6px 10px; }
+.sws span { font-size: 10px; letter-spacing: .03em; }
 
-/* Pieces */
-.piece{padding:28px 0;border-bottom:1px solid rgba(26,23,20,.08)}
-.piece:last-child{border-bottom:none}
-.pn{font-family:var(--fd);font-size:28px;font-weight:700;color:var(--sand);float:left;width:56px;margin-right:20px;line-height:1}
-.pname{font-family:var(--fd);font-size:20px;font-weight:700;margin-bottom:4px}
-.pdesc{font-size:14px;opacity:.7;margin-bottom:4px}
-.pmeta{font-size:12px;opacity:.45}
+/* Collection pieces */
+.piece { padding: 32px 0; border-bottom: 1px solid rgba(28,25,23,.06); display: grid; grid-template-columns: 56px 1fr; gap: 0 20px; }
+.piece:last-child { border-bottom: none; }
+.pn { font-family: var(--fd); font-size: 24px; font-weight: 300; color: var(--stone); padding-top: 2px; }
+.pname { font-family: var(--fd); font-size: 20px; font-weight: 500; margin-bottom: 6px; }
+.pdesc { font-size: 14px; opacity: .65; margin-bottom: 6px; line-height: 1.7; }
+.pmeta { font-size: 12px; opacity: .4; line-height: 1.6; }
+.pcolors { display: flex; gap: 6px; margin-top: 8px; align-items: center; }
+.pcolor { width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(28,25,23,.08); }
+.pcolor-label { font-size: 11px; opacity: .4; }
+.ppairs { font-size: 12px; opacity: .45; margin-top: 8px; font-style: italic; }
 
-/* Voice */
-.voice-card{padding:28px;margin-bottom:16px}
-.voice-title{font-family:var(--fd);font-size:22px;font-weight:600;margin-bottom:6px}
-.voice-text{font-size:14px;opacity:.65;line-height:1.7}
-
-/* Apps */
-.app-label{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;opacity:.4;text-align:center;margin-top:12px}
+/* Voice examples */
+.ex-yes { border-left: 2px solid var(--stone); padding: 12px 20px; margin-bottom: 12px; font-size: 14px; line-height: 1.6; opacity: .8; }
+.ex-no { border-left: 2px solid #8B6B5E; padding: 12px 20px; margin-bottom: 12px; font-size: 14px; line-height: 1.6; opacity: .45; text-decoration: line-through; }
 
 /* Do/Don't */
-.do-item{padding:14px 0 14px 20px;border-left:3px solid var(--sand);margin-bottom:12px;font-size:14px;opacity:.8}
-.dont-item{padding:14px 0 14px 20px;border-left:3px solid #8b5e5e;margin-bottom:12px;font-size:14px;opacity:.6}
-
-/* Footer */
-.foot{background:var(--night);color:var(--cream);text-align:center;padding:48px;font-size:11px;letter-spacing:.15em;opacity:.35}
-
-/* TOC */
-.toc-item{display:flex;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid rgba(26,23,20,.06)}
-.toc-num{font-family:var(--fd);font-size:24px;font-weight:700;color:var(--sand);min-width:36px}
-.toc-title{font-size:14px;font-weight:400}
-
-/* Photo panels */
-.mood{border-radius:8px;height:320px;display:flex;align-items:flex-end;padding:32px;position:relative;overflow:hidden}
-.mood-title{font-family:var(--fd);font-size:28px;font-weight:700;position:relative;z-index:1}
+.do-item { padding: 10px 0 10px 18px; border-left: 2px solid var(--stone); margin-bottom: 10px; font-size: 14px; opacity: .75; }
+.dont-item { padding: 10px 0 10px 18px; border-left: 2px solid #8B6B5E; margin-bottom: 10px; font-size: 14px; opacity: .55; }
 
 /* Wrong usage */
-.wrong{background:rgba(255,255,255,.04);border-radius:6px;padding:24px;text-align:center;position:relative;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
-.wrong::after{content:'✕';position:absolute;top:8px;right:12px;color:#8b5e5e;font-size:16px;font-weight:700}
-.wrong-label{font-size:11px;opacity:.5}
+.wrong { background: rgba(28,25,23,.03); border-radius: 4px; padding: 20px; text-align: center; position: relative; min-height: 80px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+.wrong::after { content: '\2715'; position: absolute; top: 6px; right: 10px; color: #8B6B5E; font-size: 14px; }
+.wrong-label { font-size: 10px; opacity: .4; letter-spacing: .05em; }
 
-/* Banned words */
-.banned{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.banned span{font-size:12px;padding:6px 14px;border-radius:4px;opacity:.5}
+/* Banned */
+.banned { display: flex; flex-wrap: wrap; gap: 6px; }
+.banned span { font-size: 11px; padding: 5px 12px; border-radius: 3px; opacity: .45; }
 
-/* Type scale table */
-.trow{display:grid;grid-template-columns:100px 120px 80px 100px 80px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(26,23,20,.06);font-size:13px;opacity:.7}
-.trow.thead{opacity:.4;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.1em}
-@media(max-width:800px){.trow{grid-template-columns:1fr 1fr;gap:4px}}
+/* Type scale */
+.trow { display: grid; grid-template-columns: 90px 110px 70px 90px 80px; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(28,25,23,.05); font-size: 12px; opacity: .65; }
+.trow.thead { opacity: .3; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .1em; }
+@media (max-width: 800px) { .trow { grid-template-columns: 1fr 1fr; gap: 2px; font-size: 11px; } }
 
-/* Example columns */
-.ex-yes{border-left:3px solid var(--sand);padding:16px 20px;margin-bottom:16px;border-radius:0 6px 6px 0;background:rgba(196,168,130,.06)}
-.ex-no{border-left:3px solid #8b5e5e;padding:16px 20px;margin-bottom:16px;border-radius:0 6px 6px 0;background:rgba(139,94,94,.04);opacity:.6;text-decoration:line-through}
-.ex-text{font-size:14px;line-height:1.6}
+/* Mood panels */
+.mood { border-radius: 6px; height: 280px; display: flex; align-items: flex-end; padding: 28px; }
+.mood-title { font-family: var(--fd); font-size: 24px; font-weight: 400; }
+
+/* App labels */
+.app-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .2em; opacity: .35; text-align: center; margin-top: 10px; }
+
+/* Wardrobe system */
+.outfit { padding: 24px; border-radius: 6px; background: rgba(28,25,23,.02); }
+.outfit-title { font-family: var(--fd); font-size: 17px; font-weight: 500; margin-bottom: 6px; }
+.outfit-pieces { font-size: 13px; opacity: .55; line-height: 1.7; }
+
+/* Footer */
+.foot { background: var(--night); color: var(--cream); text-align: center; padding: 48px; font-size: 10px; letter-spacing: .2em; opacity: .3; }
+
+/* TOC */
+.toc-item { display: flex; align-items: baseline; gap: 16px; padding: 10px 0; border-bottom: 1px solid rgba(28,25,23,.05); }
+.toc-num { font-family: var(--fd); font-size: 22px; font-weight: 300; color: var(--stone); min-width: 32px; }
+.toc-title { font-size: 14px; font-weight: 400; opacity: .7; }
 </style>
 </head>
 <body>
 
-<!-- ==================== 1. COVER ==================== -->
+<!-- ══════════════════ COVER ══════════════════ -->
 <section class="cover">
-  <div class="cover-sub">Confidential &mdash; Prepared October 2026</div>
-  <div class="wm cover-wm">AZZOY</div>
-  <div class="cover-sub" style="opacity:.6;font-size:15px;letter-spacing:.15em">Brand Manual</div>
-  <div class="cover-line"></div>
-  <div class="cover-sub">Collection One: Passage &mdash; Cairo</div>
+  <div style="font-size:10px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;opacity:.25;margin-bottom:56px">Confidential</div>
+  <div class="wm" style="font-size:clamp(52px,13vw,130px);line-height:1;margin-bottom:36px">AZZOY</div>
+  <div style="width:40px;height:1px;background:var(--cream);opacity:.12;margin:0 auto 36px"></div>
+  <div style="font-family:var(--fd);font-size:16px;font-weight:300;letter-spacing:.08em;opacity:.45;margin-bottom:8px">Brand Manual</div>
+  <div style="font-size:12px;font-weight:400;letter-spacing:.15em;opacity:.25;margin-bottom:4px">Collection One &middot; October 2026</div>
+  <div style="font-size:11px;font-weight:400;letter-spacing:.15em;opacity:.2">Cairo</div>
 </section>
 
-<!-- ==================== 2. TABLE OF CONTENTS ==================== -->
+<!-- ══════════════════ TOC ══════════════════ -->
 <section class="s sl">
   <div class="c">
     <div class="lab">Contents</div>
@@ -124,584 +142,800 @@ h3{font-family:var(--fd);font-weight:600;font-size:clamp(20px,3vw,28px);line-hei
       <div>
         <div class="toc-item"><span class="toc-num">01</span><span class="toc-title">Brand Strategy</span></div>
         <div class="toc-item"><span class="toc-num">02</span><span class="toc-title">Wordmark</span></div>
-        <div class="toc-item"><span class="toc-num">03</span><span class="toc-title">The House Mark</span></div>
-        <div class="toc-item"><span class="toc-num">04</span><span class="toc-title">Identity Rules</span></div>
+        <div class="toc-item"><span class="toc-num">03</span><span class="toc-title">House Mark</span></div>
+        <div class="toc-item"><span class="toc-num">04</span><span class="toc-title">Identity System &amp; Rules</span></div>
         <div class="toc-item"><span class="toc-num">05</span><span class="toc-title">Color</span></div>
         <div class="toc-item"><span class="toc-num">06</span><span class="toc-title">Typography</span></div>
       </div>
       <div>
-        <div class="toc-item"><span class="toc-num">07</span><span class="toc-title">Visual World</span></div>
+        <div class="toc-item"><span class="toc-num">07</span><span class="toc-title">Visual World &amp; Photography</span></div>
         <div class="toc-item"><span class="toc-num">08</span><span class="toc-title">Applications</span></div>
         <div class="toc-item"><span class="toc-num">09</span><span class="toc-title">Voice &amp; Copy</span></div>
-        <div class="toc-item"><span class="toc-num">10</span><span class="toc-title">Collection One: Passage</span></div>
-        <div class="toc-item"><span class="toc-num">11</span><span class="toc-title">Dos &amp; Don&rsquo;ts</span></div>
+        <div class="toc-item"><span class="toc-num">10</span><span class="toc-title">Collection One</span></div>
+        <div class="toc-item"><span class="toc-num">11</span><span class="toc-title">Wardrobe System</span></div>
+        <div class="toc-item"><span class="toc-num">12</span><span class="toc-title">Standards</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 3. BRAND STRATEGY ==================== -->
+<!-- ══════════════════ 01 BRAND STRATEGY ══════════════════ -->
 <section class="s sd">
   <div class="c">
     <div class="lab">01 &mdash; Brand Strategy</div>
-    <h2>Position</h2>
+    <h2>The House</h2>
 
-    <div style="margin-bottom:64px">
-      <h3 style="color:var(--sand);margin-bottom:16px">Brand Essence</h3>
-      <div style="font-family:var(--fd);font-size:clamp(24px,4vw,36px);font-weight:400;font-style:italic;opacity:.8;max-width:500px">Garments of uncommon quality. Nothing else.</div>
+    <div style="margin-bottom:72px">
+      <div style="font-family:var(--fd);font-size:clamp(22px,3.5vw,32px);font-weight:300;font-style:italic;opacity:.75;max-width:520px;line-height:1.5;margin-bottom:32px">The pleasure of wearing something truly well made.</div>
+      <p class="bt">AZZOY is a menswear house from Cairo. It exists to make clothes that feel exceptional on the body&thinsp;&mdash;&thinsp;through the quality of the fiber, the intelligence of the cut, and the honesty of the finish. The brand is built on Egyptian cotton not as heritage storytelling, but because it produces the finest hand-feel of any natural fiber on earth. Everything follows from the material.</p>
     </div>
 
-    <div style="margin-bottom:64px">
+    <div style="margin-bottom:72px">
       <h3>Positioning</h3>
-      <div class="quote">AZZOY is a modern luxury house from Egypt. It makes clothes for people who have stopped trying to impress anyone. Every garment is built from the material out&thinsp;&mdash;&thinsp;natural fibers, architectural cuts, finishes that improve with wear. The brand does not explain itself. The product is the entire argument.</div>
+      <div class="quote">AZZOY occupies the space where material quality replaces visible identity. The customer does not buy a logo. He buys a fabric he can feel before he sees it, a collar that sits without effort, a trouser that falls with the weight of something real. The brand competes with Loro Piana on touch, with Zegna on tailoring sensibility, and with Cucinelli on quiet taste&thinsp;&mdash;&thinsp;but speaks from Cairo, with the warmth and ease of a city that has dressed well for five thousand years.</div>
     </div>
 
-    <div style="margin-bottom:64px">
+    <div style="margin-bottom:72px">
       <h3>Values</h3>
-      <div class="g4" style="margin-top:32px">
-        <div class="val">
-          <div class="val-num">1</div>
-          <div class="val-title">Material First</div>
-          <div class="val-desc">Quality begins in the fiber, not the marketing.</div>
-        </div>
-        <div class="val">
-          <div class="val-num">2</div>
-          <div class="val-title">Quiet Authority</div>
-          <div class="val-desc">Confidence that does not perform.</div>
-        </div>
-        <div class="val">
-          <div class="val-num">3</div>
-          <div class="val-title">Egyptian Roots, Global Standards</div>
-          <div class="val-desc">Heritage through material mastery, never through decoration.</div>
-        </div>
-        <div class="val">
-          <div class="val-num">4</div>
-          <div class="val-title">Permanence Over Trend</div>
-          <div class="val-desc">Built to outlast the season it was made for.</div>
-        </div>
+      <div class="g4" style="margin-top:28px">
+        <div class="val"><div class="val-num">01</div><div class="val-title">Material Intelligence</div><div class="val-desc">The fabric is chosen first. Everything else&thinsp;&mdash;&thinsp;cut, color, finish&thinsp;&mdash;&thinsp;follows from what the material wants to do.</div></div>
+        <div class="val"><div class="val-num">02</div><div class="val-title">Quiet Pleasure</div><div class="val-desc">Luxury as private enjoyment, not public performance. The wearer feels it. Others may notice. Neither matters more than the other.</div></div>
+        <div class="val"><div class="val-num">03</div><div class="val-title">Egyptian Ground</div><div class="val-desc">Rooted in the world&rsquo;s finest cotton-growing region and one of its oldest material cultures. Global in standard, Egyptian in origin.</div></div>
+        <div class="val"><div class="val-num">04</div><div class="val-title">Considered Restraint</div><div class="val-desc">Every decision is deliberate. Nothing is added for novelty. Nothing is removed for minimalism. Only what serves the garment remains.</div></div>
       </div>
     </div>
 
+    <div style="margin-bottom:72px">
+      <h3>The Customer</h3>
+      <p class="bt">Men 20&ndash;60, living between Cairo, Dubai, London, Milan, and the Gulf. He has developed his taste beyond logos. He owns Loro Piana cashmere, Zegna suiting, Cucinelli knitwear&thinsp;&mdash;&thinsp;not for the labels, but because the hand convinced him. He shops slowly. He notices how a fabric drapes, how a seam is finished, how a collar rolls. He wants clothes that feel like a pleasure to put on, not a statement to make. He is equally at home at a private dinner in Zamalek, a meeting in Mayfair, or a weekend in Gouna.</p>
+    </div>
+
+    <div style="margin-bottom:72px">
+      <h3>Market Logic</h3>
+      <p class="bt">No serious luxury menswear house speaks from Egypt today, despite Egypt producing the world&rsquo;s finest long-staple cotton. AZZOY closes that gap. The brand controls its material story from fiber to finished garment. It launches direct-to-consumer through azzoy.co, building trust through product before pursuing wholesale. Cairo is not the limitation&thinsp;&mdash;&thinsp;it is the advantage. Lower cost base, proximity to the raw material, and an emerging luxury consumer class that currently imports everything it wears.</p>
+    </div>
+
     <div>
-      <h3>Target</h3>
-      <p class="bt">Men 28&ndash;50 who buy quality over brand recognition. They own Loro Piana, not because of the name, but because of the hand. They live between Cairo, London, Milan, Dubai. They do not follow trends. They notice fabric weight, collar roll, and how a sleeve falls.</p>
+      <h3>Growth Logic</h3>
+      <p class="bt" style="margin-bottom:16px"><strong style="font-weight:500">Year One:</strong> Single collection, direct-to-consumer, Cairo-based. Prove the product.</p>
+      <p class="bt" style="margin-bottom:16px"><strong style="font-weight:500">Year Two:</strong> Expand to two seasonal collections. Enter Dubai retail selectively. Begin wholesale conversations with European multi-brand stores (The Franks, Matches, Eskandar).</p>
+      <p class="bt"><strong style="font-weight:500">Year Three:</strong> Permanent e-commerce globally. Consider a Cairo flagship&thinsp;&mdash;&thinsp;small, appointment-based, in Zamalek or Garden City. Add accessories (belts, leather goods) only when the clothing has earned trust.</p>
     </div>
   </div>
 </section>
 
-<!-- ==================== 4. WORDMARK ==================== -->
+<!-- ══════════════════ 02 WORDMARK ══════════════════ -->
 <section class="s sc">
   <div class="c">
     <div class="lab">02 &mdash; Wordmark</div>
     <h2>The AZZOY Wordmark</h2>
-    <div class="g2" style="margin-bottom:48px">
-      <div class="card" style="background:var(--night);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px">
-        <div class="wm" style="font-size:clamp(32px,5vw,48px);color:var(--cream)">AZZOY</div>
-        <div style="font-size:11px;opacity:.4;margin-top:16px;color:var(--cream)">Primary &mdash; Dark Ground</div>
+    <p class="bt" style="margin-bottom:48px">The wordmark is the primary identity of the house. Set in Cormorant Garamond at medium weight with generous tracking, it carries the quiet authority of a serif with the openness of wide letter-spacing. It does not shout. It occupies space with the confidence of a name that needs no embellishment.</p>
+    <div class="g2" style="margin-bottom:40px">
+      <div class="card" style="background:var(--night);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px">
+        <div class="wm" style="font-size:clamp(28px,4.5vw,44px);color:var(--cream)">AZZOY</div>
+        <div style="font-size:10px;opacity:.3;margin-top:18px;color:var(--cream);letter-spacing:.1em">Primary &mdash; Dark</div>
       </div>
-      <div class="card" style="background:var(--cream);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;border:1px solid var(--linen)">
-        <div class="wm" style="font-size:clamp(32px,5vw,48px);color:var(--night)">AZZOY</div>
-        <div style="font-size:11px;opacity:.4;margin-top:16px">Primary &mdash; Light Ground</div>
+      <div class="card" style="background:var(--cream);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;border:1px solid var(--linen)">
+        <div class="wm" style="font-size:clamp(28px,4.5vw,44px);color:var(--night)">AZZOY</div>
+        <div style="font-size:10px;opacity:.3;margin-top:18px;letter-spacing:.1em">Primary &mdash; Light</div>
       </div>
-      <div class="card" style="background:var(--sand);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px">
-        <div class="wm" style="font-size:clamp(32px,5vw,48px);color:var(--night)">AZZOY</div>
-        <div style="font-size:11px;opacity:.4;margin-top:16px">On Brand Color</div>
+      <div class="card" style="background:var(--stone);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px">
+        <div class="wm" style="font-size:clamp(28px,4.5vw,44px);color:var(--night)">AZZOY</div>
+        <div style="font-size:10px;opacity:.35;margin-top:18px;letter-spacing:.1em">On Stone</div>
       </div>
-      <div class="card" style="background:var(--white);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;border:1px solid var(--linen)">
-        <div class="wm" style="font-size:clamp(32px,5vw,48px);color:var(--char)">AZZOY</div>
-        <div style="font-size:11px;opacity:.4;margin-top:16px">On White</div>
+      <div class="card" style="background:var(--parchment);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;border:1px solid var(--linen)">
+        <div class="wm" style="font-size:clamp(28px,4.5vw,44px);color:var(--ash)">AZZOY</div>
+        <div style="font-size:10px;opacity:.3;margin-top:18px;letter-spacing:.1em">On Parchment</div>
       </div>
     </div>
-    <div style="font-size:14px;opacity:.6;line-height:2;max-width:560px">
-      <strong style="font-weight:500">Typeface:</strong> Cormorant Garamond, 700<br>
-      <strong style="font-weight:500">Letter-spacing:</strong> 0.3em &mdash; tracked for presence, not shouting<br>
-      <strong style="font-weight:500">Clear space:</strong> Width of the letter &ldquo;A&rdquo; on all sides minimum<br>
-      <strong style="font-weight:500">Minimum size:</strong> 14mm in print, 120px on screen
+    <div style="font-size:13px;opacity:.5;line-height:2">
+      <strong style="font-weight:500">Typeface:</strong> Cormorant Garamond, 600 weight<br>
+      <strong style="font-weight:500">Tracking:</strong> 0.25em<br>
+      <strong style="font-weight:500">Clear space:</strong> Height of the letter &ldquo;Z&rdquo; on all sides<br>
+      <strong style="font-weight:500">Minimum:</strong> 14mm print &middot; 100px screen
     </div>
   </div>
 </section>
 
-<!-- ==================== 5. MONOGRAM ==================== -->
+<!-- ══════════════════ 03 HOUSE MARK ══════════════════ -->
 <section class="s sd">
   <div class="c">
-    <div class="lab">03 &mdash; The House Mark</div>
-    <h2>AZZOY Monogram</h2>
-    <div style="text-align:center;margin-bottom:48px">
-      <svg viewBox="0 0 120 120" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="30" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/>
-        <line x1="90" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/>
-        <line x1="27" y1="92" x2="33" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/>
-        <line x1="87" y1="92" x2="93" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/>
+    <div class="lab">03 &mdash; House Mark</div>
+    <h2>The AZZOY Mark</h2>
+    <p class="bt" style="margin-bottom:56px">The house mark is a single letterform&thinsp;&mdash;&thinsp;a serifed &ldquo;A&rdquo; drawn with classical proportions and a fine crossbar set low, referencing traditional Roman lapidary inscriptions. It is not a modern geometric construction. It is a letter carved with the patience of a stonemason: balanced, warm, and unhurried. The serifs are bracketed, not sharp&thinsp;&mdash;&thinsp;connecting the mark to the tradition of fine typography rather than technology or architecture.</p>
+
+    <div style="text-align:center;margin-bottom:56px">
+      <!-- Bespoke serifed A — classical proportions, low crossbar, bracketed serifs -->
+      <svg viewBox="0 0 200 200" width="180" height="180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left stroke -->
+        <path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#F2EDE4"/>
+        <!-- Right stroke -->
+        <path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#F2EDE4"/>
+        <!-- Low crossbar -->
+        <rect x="72" y="124" width="56" height="3.5" fill="#F2EDE4" rx="0.5"/>
+        <!-- Left foot serif -->
+        <rect x="42" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/>
+        <!-- Right foot serif -->
+        <rect x="134" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/>
+        <!-- Apex serif -->
+        <rect x="91" y="37" width="18" height="3" fill="#F2EDE4" rx="0.5"/>
       </svg>
     </div>
-    <p style="text-align:center;max-width:640px;margin:0 auto 56px;opacity:.7;font-size:15px;line-height:1.9">An architectural letter, not a typeface glyph. Two strokes converge at a single apex. The crossbar is removed&thinsp;&mdash;&thinsp;the most recognizable feature of the letter A is deliberately absent, creating a form that reads as both a letter and a structure. The serif notches at the base reference the precision of stone-cut marks. It belongs to AZZOY alone.</p>
 
-    <div class="g3" style="max-width:500px;margin:0 auto">
+    <div style="text-align:center;max-width:580px;margin:0 auto 64px;opacity:.65;font-size:14px;line-height:1.85">The crossbar sits at one-third height from the base, giving the letter a low center of gravity&thinsp;&mdash;&thinsp;grounded, substantial, composed. The apex carries a small head serif that softens the peak. The foot serifs are wide enough to give the mark stability without heaviness. At small sizes, the mark reads as a confident, singular letter. At large sizes, the drawn quality of its proportions becomes visible.</div>
+
+    <div class="g3" style="max-width:480px;margin:0 auto">
       <div style="text-align:center">
-        <div style="width:100px;height:100px;background:var(--night);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;border:1px solid rgba(240,235,224,.1)">
-          <svg viewBox="0 0 120 120" width="48" height="48" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/></svg>
+        <div style="width:88px;height:88px;background:var(--night);border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;border:1px solid rgba(242,237,228,.06)">
+          <svg viewBox="0 0 200 200" width="40" height="40" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#F2EDE4"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#F2EDE4"/><rect x="72" y="124" width="56" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#F2EDE4" rx="0.5"/></svg>
         </div>
-        <div class="app-label">Social Avatar</div>
+        <div class="app-label">Dark Ground</div>
       </div>
       <div style="text-align:center">
-        <div style="width:100px;height:100px;background:var(--cream);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
-          <svg viewBox="0 0 120 120" width="48" height="48" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/></svg>
+        <div style="width:88px;height:88px;background:var(--cream);border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
+          <svg viewBox="0 0 200 200" width="40" height="40" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#1C1917"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#1C1917"/><rect x="72" y="124" width="56" height="3.5" fill="#1C1917" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#1C1917" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#1C1917" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#1C1917" rx="0.5"/></svg>
         </div>
-        <div class="app-label">Light Application</div>
+        <div class="app-label">Light Ground</div>
       </div>
       <div style="text-align:center">
-        <div style="width:100px;height:100px;background:var(--sand);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
-          <svg viewBox="0 0 120 120" width="48" height="48" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/></svg>
+        <div style="width:88px;height:88px;background:var(--stone);border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
+          <svg viewBox="0 0 200 200" width="40" height="40" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#1C1917"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#1C1917"/><rect x="72" y="124" width="56" height="3.5" fill="#1C1917" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#1C1917" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#1C1917" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#1C1917" rx="0.5"/></svg>
         </div>
-        <div class="app-label">On Brand Color</div>
+        <div class="app-label">On Stone</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 6. IDENTITY RULES ==================== -->
+<!-- ══════════════════ 04 IDENTITY RULES ══════════════════ -->
 <section class="s sl">
   <div class="c">
-    <div class="lab">04 &mdash; Identity Rules</div>
-    <h2>System &amp; Usage</h2>
+    <div class="lab">04 &mdash; Identity System</div>
+    <h2>System &amp; Rules</h2>
 
     <div style="margin-bottom:64px">
-      <h3>Hierarchy</h3>
-      <div class="g3" style="margin-top:24px;text-align:center">
-        <div style="padding:32px 16px">
-          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--sand);margin-bottom:16px">Primary</div>
-          <div class="wm" style="font-size:32px">AZZOY</div>
-          <div style="font-size:12px;opacity:.4;margin-top:12px">Always preferred</div>
+      <h3>Hierarchy of Marks</h3>
+      <div class="g3" style="margin-top:28px;text-align:center">
+        <div style="padding:28px 16px">
+          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--stone);margin-bottom:20px">Primary</div>
+          <div class="wm" style="font-size:28px">AZZOY</div>
+          <div style="font-size:11px;opacity:.35;margin-top:14px">All primary applications</div>
         </div>
-        <div style="padding:32px 16px">
-          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--sand);margin-bottom:16px">Secondary</div>
-          <div style="margin:0 auto;width:fit-content"><svg viewBox="0 0 120 120" width="40" height="40" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/></svg></div>
-          <div style="font-size:12px;opacity:.4;margin-top:12px">Where space requires it</div>
+        <div style="padding:28px 16px">
+          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--stone);margin-bottom:20px">Secondary</div>
+          <div style="margin:0 auto;width:fit-content"><svg viewBox="0 0 200 200" width="36" height="36" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#1C1917"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#1C1917"/><rect x="72" y="124" width="56" height="3.5" fill="#1C1917" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#1C1917" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#1C1917" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#1C1917" rx="0.5"/></svg></div>
+          <div style="font-size:11px;opacity:.35;margin-top:14px">Compact applications</div>
         </div>
-        <div style="padding:32px 16px">
-          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--sand);margin-bottom:16px">Lockup</div>
-          <div class="wm" style="font-size:20px;margin-bottom:6px">AZZOY</div>
-          <div style="width:40px;height:1px;background:var(--night);opacity:.2;margin:0 auto 6px"></div>
-          <div style="font-size:9px;font-weight:500;letter-spacing:.3em">CAIRO</div>
-          <div style="font-size:12px;opacity:.4;margin-top:12px">Official documents &amp; packaging</div>
+        <div style="padding:28px 16px">
+          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--stone);margin-bottom:20px">Lockup</div>
+          <div class="wm" style="font-size:16px;margin-bottom:8px">AZZOY</div>
+          <div style="width:32px;height:1px;background:var(--night);opacity:.15;margin:0 auto 8px"></div>
+          <div style="font-size:9px;font-weight:500;letter-spacing:.25em;opacity:.55">CAIRO</div>
+          <div style="font-size:11px;opacity:.35;margin-top:14px">Packaging &amp; documents</div>
         </div>
       </div>
     </div>
 
     <div>
       <h3>Incorrect Usage</h3>
-      <div class="g4" style="margin-top:24px">
+      <div class="g4" style="margin-top:20px">
         <div class="wrong">
-          <div class="wm" style="font-size:20px;transform:scaleX(1.4) scaleY(0.7);color:var(--char)">AZZOY</div>
-          <div class="wrong-label">Do not distort</div>
+          <div class="wm" style="font-size:18px;transform:scaleX(1.5)scaleY(.7)">AZZOY</div>
+          <div class="wrong-label">Never distort</div>
         </div>
         <div class="wrong">
-          <div class="wm" style="font-size:20px;color:#e74c3c">AZZOY</div>
-          <div class="wrong-label">Do not use unauthorized colors</div>
+          <div class="wm" style="font-size:18px;color:#D4442A">AZZOY</div>
+          <div class="wrong-label">Never recolor</div>
         </div>
         <div class="wrong">
-          <div class="wm" style="font-size:9px;color:var(--char)">AZZOY</div>
-          <div class="wrong-label">Do not reduce below minimum</div>
+          <div class="wm" style="font-size:8px">AZZOY</div>
+          <div class="wrong-label">Never below minimum</div>
         </div>
         <div class="wrong">
-          <div class="wm" style="font-size:20px;color:var(--char);text-shadow:3px 3px 8px rgba(0,0,0,.4)">AZZOY</div>
-          <div class="wrong-label">Do not add effects</div>
+          <div class="wm" style="font-size:18px;text-shadow:2px 2px 6px rgba(0,0,0,.3)">AZZOY</div>
+          <div class="wrong-label">Never add effects</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 7. COLOR ==================== -->
+<!-- ══════════════════ 05 COLOR ══════════════════ -->
 <section class="s sc">
   <div class="c">
     <div class="lab">05 &mdash; Color</div>
-    <h2>Brand Palette</h2>
+    <h2>Palette</h2>
 
-    <div style="margin-bottom:48px">
+    <div style="margin-bottom:56px">
       <h3>Primary</h3>
-      <div class="g3" style="margin-bottom:24px">
-        <div class="sw" style="background:var(--night)"><span style="color:var(--cream)">Night &middot; #1a1714</span></div>
-        <div class="sw" style="background:var(--sand)"><span style="color:var(--night)">Sandstone &middot; #c4a882</span></div>
-        <div class="sw" style="background:var(--cream);border:1px solid var(--linen)"><span style="color:var(--night)">Cream &middot; #f0ebe0</span></div>
+      <div class="g3" style="margin-bottom:20px">
+        <div class="sw" style="background:#1C1917"><span style="color:#F2EDE4">Night &middot; #1C1917</span></div>
+        <div class="sw" style="background:#A8967A"><span style="color:#1C1917">Stone &middot; #A8967A</span></div>
+        <div class="sw" style="background:#F2EDE4;border:1px solid #E6DFD3"><span style="color:#1C1917">Cream &middot; #F2EDE4</span></div>
       </div>
-      <p class="bt">These three carry 90% of all brand communications. Night and Cream are the primary pair. Sandstone is the accent&thinsp;&mdash;&thinsp;used sparingly for emphasis.</p>
+      <p class="bt">Night and Cream are the primary pair. Stone is the accent&thinsp;&mdash;&thinsp;the warmth in every composition. These three colors carry the entire identity.</p>
     </div>
 
-    <div style="margin-bottom:48px">
+    <div style="margin-bottom:56px">
       <h3>Extended</h3>
-      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px">
-        <div class="sws" style="background:var(--white);border:1px solid var(--linen)"><span style="color:var(--night)">Warm White</span></div>
-        <div class="sws" style="background:var(--linen)"><span style="color:var(--night)">Linen</span></div>
-        <div class="sws" style="background:var(--char)"><span style="color:var(--cream)">Charcoal</span></div>
-        <div class="sws" style="background:var(--clay)"><span style="color:var(--cream)">Nile Clay</span></div>
-        <div class="sws" style="background:var(--dusk)"><span style="color:var(--cream)">Dusk</span></div>
-        <div class="sws" style="background:var(--saffron)"><span style="color:var(--night)">Saffron</span></div>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:20px">
+        <div class="sws" style="background:#FAF8F4;border:1px solid #E6DFD3"><span>Parchment</span></div>
+        <div class="sws" style="background:#E6DFD3"><span>Linen</span></div>
+        <div class="sws" style="background:#4A4540"><span style="color:#F2EDE4">Ash</span></div>
+        <div class="sws" style="background:#8B7355"><span style="color:#F2EDE4">Clay</span></div>
+        <div class="sws" style="background:#706A5E"><span style="color:#F2EDE4">Dusk</span></div>
+        <div class="sws" style="background:#B8976A"><span style="color:#1C1917">Saffron</span></div>
       </div>
-      <p class="bt">Extended tones are reserved for product photography, editorial, and collection palettes. They never replace the primary three in identity applications.</p>
+      <p class="bt">Extended palette is for editorial, product photography, and seasonal collections. These tones never replace the primary three in brand applications.</p>
     </div>
 
     <div>
       <h3>Digital Application</h3>
-      <div style="max-width:480px;border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(26,23,20,.1);margin-top:24px">
-        <div style="background:var(--night);padding:14px 24px;display:flex;align-items:center">
-          <span class="wm" style="font-size:12px;color:var(--cream)">AZZOY</span>
-          <span style="margin-left:auto;font-size:10px;color:var(--cream);opacity:.3">Menu</span>
+      <div style="max-width:460px;border-radius:6px;overflow:hidden;box-shadow:0 6px 24px rgba(28,25,23,.08);margin-top:20px">
+        <div style="background:#1C1917;padding:12px 20px;display:flex;align-items:center">
+          <span class="wm" style="font-size:11px;color:#F2EDE4">AZZOY</span>
+          <span style="margin-left:auto;font-size:9px;color:#F2EDE4;opacity:.25;letter-spacing:.1em">Shop &nbsp; About &nbsp; Journal</span>
         </div>
-        <div style="background:var(--white);padding:48px 24px;text-align:center">
-          <div style="font-family:var(--fd);font-size:24px;font-weight:600;margin-bottom:8px">Collection One</div>
-          <div style="font-size:13px;opacity:.5">Discover Passage</div>
+        <div style="background:#FAF8F4;padding:44px 20px;text-align:center">
+          <div style="font-family:var(--fd);font-size:20px;font-weight:300;letter-spacing:.04em;margin-bottom:6px">Collection One</div>
+          <div style="font-size:11px;opacity:.4">Discover</div>
         </div>
-        <div style="height:3px;background:var(--sand)"></div>
-        <div style="background:var(--night);padding:16px 24px">
-          <span class="wm" style="font-size:9px;color:var(--cream);opacity:.4">AZZOY</span>
+        <div style="height:2px;background:#A8967A"></div>
+        <div style="background:#1C1917;padding:12px 20px;display:flex;justify-content:space-between;align-items:center">
+          <span class="wm" style="font-size:8px;color:#F2EDE4;opacity:.3">AZZOY</span>
+          <span style="font-size:8px;color:#F2EDE4;opacity:.2;letter-spacing:.08em">azzoy.co</span>
         </div>
       </div>
-      <div style="font-size:12px;opacity:.4;margin-top:16px">Distribution: 60% Warm White &mdash; 30% Night &mdash; 10% Sandstone</div>
+      <div style="font-size:11px;opacity:.35;margin-top:14px">60% Parchment &middot; 30% Night &middot; 10% Stone</div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 8. TYPOGRAPHY ==================== -->
+<!-- ══════════════════ 06 TYPOGRAPHY ══════════════════ -->
 <section class="s sl">
   <div class="c">
     <div class="lab">06 &mdash; Typography</div>
     <h2>Type System</h2>
 
     <div style="margin-bottom:64px">
-      <h3 style="color:var(--sand)">Display &mdash; Cormorant Garamond</h3>
-      <div style="margin-bottom:8px"><span class="wm" style="font-size:48px">AZZOY</span></div>
-      <div style="font-family:var(--fd);font-size:32px;font-weight:400;font-style:italic;margin-bottom:8px;opacity:.8">Nothing unnecessary.</div>
-      <div style="font-family:var(--fd);font-size:24px;font-weight:600;margin-bottom:12px;opacity:.7">The weight of intention</div>
-      <div style="font-family:var(--fd);font-size:16px;font-weight:400;letter-spacing:.15em;opacity:.5;margin-bottom:4px">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
-      <div style="font-family:var(--fd);font-size:16px;font-weight:400;opacity:.5">abcdefghijklmnopqrstuvwxyz 0123456789</div>
-      <div style="font-size:12px;opacity:.35;margin-top:16px">Used for: Wordmark, headlines, pull quotes, collection titles, price displays</div>
+      <h3 style="color:var(--stone)">Cormorant Garamond &mdash; Display</h3>
+      <div style="font-family:var(--fd);font-weight:600;font-size:42px;letter-spacing:.25em;margin-bottom:10px">AZZOY</div>
+      <div style="font-family:var(--fd);font-weight:300;font-style:italic;font-size:28px;margin-bottom:10px;opacity:.75">The pleasure of wearing something truly well made.</div>
+      <div style="font-family:var(--fd);font-weight:500;font-size:20px;margin-bottom:14px;opacity:.6">Collection One &middot; Passage</div>
+      <div style="font-family:var(--fd);font-weight:300;font-size:15px;letter-spacing:.1em;opacity:.4;margin-bottom:4px">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+      <div style="font-family:var(--fd);font-weight:300;font-size:15px;opacity:.4">abcdefghijklmnopqrstuvwxyz &nbsp; 0123456789</div>
+      <div style="font-size:11px;opacity:.3;margin-top:14px">Headlines, wordmark, collection titles, pull quotes, prices</div>
     </div>
 
     <div style="margin-bottom:64px">
-      <h3 style="color:var(--sand)">Body &mdash; Inter</h3>
-      <div style="font-size:18px;font-weight:300;margin-bottom:8px;opacity:.8">Garments built from the material out.</div>
-      <div style="font-size:15px;font-weight:400;margin-bottom:8px;opacity:.65">Egyptian Giza 88 cotton poplin, two-ply, 100s thread count.</div>
-      <div style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px;opacity:.45">Product Details / Shipping / Care Instructions</div>
-      <div style="font-size:15px;font-weight:400;opacity:.4">abcdefghijklmnopqrstuvwxyz 0123456789</div>
-      <div style="font-size:12px;opacity:.35;margin-top:16px">Used for: Body copy, navigation, product details, UI, captions</div>
+      <h3 style="color:var(--stone)">Inter &mdash; Body</h3>
+      <div style="font-size:17px;font-weight:300;margin-bottom:8px;opacity:.75">Egyptian Giza 88 cotton, two-ply, 100s thread count.</div>
+      <div style="font-size:14px;font-weight:400;margin-bottom:8px;opacity:.55">Relaxed fit through the body. Slightly dropped shoulder. Single-needle stitching throughout.</div>
+      <div style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;opacity:.35">Product Details &nbsp;&middot;&nbsp; Shipping &nbsp;&middot;&nbsp; Care</div>
+      <div style="font-size:14px;font-weight:300;opacity:.35">abcdefghijklmnopqrstuvwxyz &nbsp; 0123456789</div>
+      <div style="font-size:11px;opacity:.3;margin-top:14px">Body copy, navigation, product information, UI, captions</div>
     </div>
 
     <div>
-      <h3>Type Scale</h3>
+      <h3>Scale</h3>
       <div class="trow thead"><span>Role</span><span>Face</span><span>Weight</span><span>Size</span><span>Tracking</span></div>
-      <div class="trow"><span>Display</span><span>Cormorant</span><span>700</span><span>48&ndash;64px</span><span>0.3em</span></div>
-      <div class="trow"><span>H1</span><span>Cormorant</span><span>700</span><span>36&ndash;48px</span><span>0.02em</span></div>
-      <div class="trow"><span>H2</span><span>Cormorant</span><span>600</span><span>28&ndash;36px</span><span>0.02em</span></div>
-      <div class="trow"><span>H3</span><span>Cormorant</span><span>400i</span><span>22&ndash;28px</span><span>0.01em</span></div>
-      <div class="trow"><span>Body</span><span>Inter</span><span>300</span><span>16px</span><span>0</span></div>
-      <div class="trow"><span>Caption</span><span>Inter</span><span>400</span><span>13px</span><span>0.02em</span></div>
-      <div class="trow"><span>Label</span><span>Inter</span><span>500</span><span>10&ndash;11px</span><span>0.2em</span></div>
+      <div class="trow"><span>Display</span><span>Cormorant</span><span>600</span><span>42&ndash;56px</span><span>0.25em</span></div>
+      <div class="trow"><span>H1</span><span>Cormorant</span><span>400</span><span>30&ndash;48px</span><span>0.01em</span></div>
+      <div class="trow"><span>H2</span><span>Cormorant</span><span>400</span><span>22&ndash;28px</span><span>0.01em</span></div>
+      <div class="trow"><span>Subhead</span><span>Cormorant</span><span>300i</span><span>18&ndash;24px</span><span>0</span></div>
+      <div class="trow"><span>Body</span><span>Inter</span><span>300</span><span>15&ndash;16px</span><span>0</span></div>
+      <div class="trow"><span>Caption</span><span>Inter</span><span>400</span><span>13px</span><span>0.01em</span></div>
+      <div class="trow"><span>Label</span><span>Inter</span><span>500</span><span>10px</span><span>0.2em</span></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 9. VISUAL WORLD ==================== -->
+<!-- ══════════════════ 07 VISUAL WORLD ══════════════════ -->
 <section class="s sd">
   <div class="c">
     <div class="lab">07 &mdash; Visual World</div>
-    <h2>Photography Direction</h2>
+    <h2>Photography &amp; Art Direction</h2>
 
     <div class="g3" style="margin-bottom:48px">
       <div>
-        <div class="mood" style="background:linear-gradient(160deg,#e8e0d4,#c4a882);margin-bottom:16px">
-          <div class="mood-title" style="color:var(--night)">Still Life</div>
+        <div class="mood" style="background:linear-gradient(155deg,#E6DFD3 0%,#A8967A 100%);margin-bottom:16px">
+          <div class="mood-title" style="color:#1C1917">Still Life</div>
         </div>
-        <p style="font-size:13px;opacity:.65;line-height:1.7">Product shot on raw linen or limestone. Single garment, carefully folded or draped. Hard natural light from one direction. Deep shadows. No props. The fabric is the subject.</p>
+        <p style="font-size:13px;opacity:.6;line-height:1.75">A single garment on raw limestone or unfinished linen. Hard natural light from one window. Deep, warm shadows. No props. The texture of the fabric is the entire image.</p>
       </div>
       <div>
-        <div class="mood" style="background:linear-gradient(160deg,#3d3832,#1a1714);margin-bottom:16px">
-          <div class="mood-title" style="color:var(--cream)">Architecture</div>
+        <div class="mood" style="background:linear-gradient(155deg,#4A4540 0%,#1C1917 100%);margin-bottom:16px">
+          <div class="mood-title" style="color:#F2EDE4">Architecture</div>
         </div>
-        <p style="font-size:13px;opacity:.65;line-height:1.7">Interiors and exteriors&thinsp;&mdash;&thinsp;raw plaster walls, stone corridors, brass hardware, unfinished concrete. Cairo&rsquo;s modernist buildings and Ottoman-era courtyards. The clothes exist within structures, not landscapes.</p>
+        <p style="font-size:13px;opacity:.6;line-height:1.75">Raw plaster walls, stone corridors, mashrabiya shadows, unfinished concrete. Cairo&rsquo;s modernist villas and Ottoman courtyards. Clothes exist within structures, not against backdrops.</p>
       </div>
       <div>
-        <div class="mood" style="background:linear-gradient(160deg,#9c6b4a,#8a7e6d);margin-bottom:16px">
-          <div class="mood-title" style="color:var(--cream)">Figure</div>
+        <div class="mood" style="background:linear-gradient(155deg,#8B7355 0%,#706A5E 100%);margin-bottom:16px">
+          <div class="mood-title" style="color:#F2EDE4">The Wearer</div>
         </div>
-        <p style="font-size:13px;opacity:.65;line-height:1.7">Models are secondary to garments. Shot from the waist down, or from behind, or in motion blur. Never facing camera with eye contact. Never smiling. The human form serves the material.</p>
+        <p style="font-size:13px;opacity:.6;line-height:1.75">The human form serves the garment. Cropped at the waist, shot from behind, hands in pockets, walking. Never facing camera. Never posing. The body is felt, not displayed.</p>
       </div>
     </div>
 
-    <div style="border-top:1px solid rgba(240,235,224,.1);padding-top:32px">
-      <h3 style="font-size:16px;font-weight:500;margin-bottom:20px;font-family:var(--fb)">Photography Rules</h3>
-      <div style="font-size:14px;opacity:.6;line-height:2.2">
-        &bull; Always natural light. No studio flash.<br>
-        &bull; Muted, desaturated color grading. Never high-contrast or saturated.<br>
-        &bull; Negative space occupies at least 40% of every frame.<br>
-        &bull; No lifestyle imagery. No beaches, no restaurants, no &ldquo;moments.&rdquo; Just product, surface, and structure.
+    <div style="border-top:1px solid rgba(242,237,228,.08);padding-top:28px">
+      <h3 style="font-family:var(--fb);font-size:13px;font-weight:500;margin-bottom:16px;opacity:.5">Rules</h3>
+      <div style="font-size:13px;opacity:.5;line-height:2.2">
+        Natural light only. No studio flash, no ring lights.<br>
+        Desaturated, warm grading. Never contrasty or punchy.<br>
+        Minimum 40% negative space in every frame.<br>
+        No lifestyle. No beaches, restaurants, or &ldquo;moments.&rdquo;<br>
+        No faces in campaign imagery. Garment is always the subject.<br>
+        Every image should feel like it could hang in a gallery.
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 10. APPLICATIONS ==================== -->
+<!-- ══════════════════ 08 APPLICATIONS ══════════════════ -->
 <section class="s sc">
   <div class="c">
     <div class="lab">08 &mdash; Applications</div>
     <h2>Brand in Use</h2>
 
     <!-- Business Card -->
-    <div style="margin-bottom:64px">
+    <div style="margin-bottom:72px">
       <h3>Business Card</h3>
-      <div class="g2" style="max-width:700px;margin-top:24px">
+      <div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:24px">
         <div>
-          <div class="card" style="background:var(--night);width:320px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(26,23,20,.12)">
-            <svg viewBox="0 0 120 120" width="36" height="36" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/></svg>
-            <div style="font-size:10px;color:var(--cream);opacity:.35;margin-top:16px;letter-spacing:.1em">azzoy.com</div>
+          <div class="card" style="background:#1C1917;width:300px;height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(28,25,23,.1)">
+            <svg viewBox="0 0 200 200" width="32" height="32" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#F2EDE4"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#F2EDE4"/><rect x="72" y="124" width="56" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#F2EDE4" rx="0.5"/></svg>
           </div>
           <div class="app-label">Front</div>
         </div>
         <div>
-          <div class="card" style="background:var(--cream);width:320px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(26,23,20,.12)">
-            <div class="wm" style="font-size:16px;margin-bottom:12px">AZZOY</div>
-            <div style="width:32px;height:1px;background:var(--night);opacity:.15;margin-bottom:14px"></div>
-            <div style="font-size:13px;font-weight:300">Ahmed El-Sayed</div>
-            <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;opacity:.4;margin-top:4px">Founder</div>
+          <div class="card" style="background:#F2EDE4;width:300px;height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(28,25,23,.1)">
+            <div class="wm" style="font-size:13px;margin-bottom:14px">AZZOY</div>
+            <div style="width:28px;height:1px;background:#1C1917;opacity:.12;margin-bottom:14px"></div>
+            <div style="font-size:13px;font-weight:300">Omar Azzam</div>
+            <div style="font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;opacity:.35;margin-top:3px">Founder</div>
+            <div style="font-size:10px;font-weight:300;opacity:.3;margin-top:10px">omar@azzoy.co</div>
           </div>
           <div class="app-label">Back</div>
         </div>
       </div>
+      <p style="font-size:12px;opacity:.35;margin-top:14px">540gsm cotton stock, duplexed Night over Cream. Blind deboss on front, letterpress on back.</p>
     </div>
 
-    <!-- Garment Label + Shopping Bag -->
-    <div class="g2" style="margin-bottom:64px">
+    <!-- Garment Label -->
+    <div class="g2" style="margin-bottom:72px">
       <div>
         <h3>Garment Label</h3>
         <div style="margin-top:24px">
-          <div class="card" style="background:var(--night);width:110px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:20px 12px;box-shadow:0 8px 32px rgba(26,23,20,.12)">
+          <div class="card" style="background:#1C1917;width:100px;height:180px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:18px 10px;box-shadow:0 6px 24px rgba(28,25,23,.1)">
             <div>
-              <div class="wm" style="font-size:10px;color:var(--cream);text-align:center">AZZOY</div>
-              <div style="width:24px;height:1px;background:var(--cream);opacity:.2;margin:8px auto"></div>
-              <div style="font-size:7px;color:var(--cream);opacity:.35;text-align:center;letter-spacing:.2em">CAIRO</div>
+              <div class="wm" style="font-size:9px;color:#F2EDE4;text-align:center">AZZOY</div>
+              <div style="width:20px;height:1px;background:#F2EDE4;opacity:.15;margin:6px auto"></div>
+              <div style="font-size:7px;color:#F2EDE4;opacity:.3;text-align:center;letter-spacing:.15em">CAIRO</div>
             </div>
-            <svg viewBox="0 0 120 120" width="20" height="20" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/></svg>
+            <svg viewBox="0 0 200 200" width="16" height="16" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#F2EDE4"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#F2EDE4"/><rect x="72" y="124" width="56" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#F2EDE4" rx="0.5"/></svg>
           </div>
-          <div class="app-label" style="text-align:left">Woven Label</div>
+          <p style="font-size:12px;opacity:.35;margin-top:10px">Woven jacquard, Night ground</p>
         </div>
       </div>
       <div>
         <h3>Shopping Bag</h3>
         <div style="margin-top:24px">
-          <div class="card" style="background:var(--cream);width:200px;height:260px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:56px;box-shadow:0 12px 40px rgba(26,23,20,.1);position:relative">
-            <div style="position:absolute;top:16px;left:50%;transform:translateX(-50%);display:flex;gap:24px">
-              <div style="width:1px;height:28px;background:var(--night);opacity:.15"></div>
-              <div style="width:1px;height:28px;background:var(--night);opacity:.15"></div>
+          <div class="card" style="background:#F2EDE4;width:190px;height:240px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:48px;box-shadow:0 8px 28px rgba(28,25,23,.08);position:relative">
+            <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);display:flex;gap:20px">
+              <div style="width:1px;height:24px;background:#1C1917;opacity:.1"></div>
+              <div style="width:1px;height:24px;background:#1C1917;opacity:.1"></div>
             </div>
-            <div style="width:120px;height:1px;background:var(--night);opacity:.1;margin-bottom:20px"></div>
-            <div class="wm" style="font-size:14px">AZZOY</div>
+            <div style="width:100px;height:1px;background:#1C1917;opacity:.08;margin-bottom:16px"></div>
+            <div class="wm" style="font-size:12px">AZZOY</div>
           </div>
-          <div class="app-label" style="text-align:left">Unbleached Cotton, Screen-printed</div>
+          <p style="font-size:12px;opacity:.35;margin-top:10px">Unbleached cotton, screen-printed</p>
         </div>
       </div>
     </div>
 
-    <!-- Website Hero -->
-    <div style="margin-bottom:64px">
-      <h3>Website Hero</h3>
-      <div class="card" style="background:var(--night);padding:48px;border-left:4px solid var(--sand);margin-top:24px;box-shadow:0 8px 32px rgba(26,23,20,.12)">
-        <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.25em;color:var(--sand);margin-bottom:12px">Collection One</div>
-        <div style="font-family:var(--fd);font-size:clamp(36px,6vw,56px);font-weight:700;color:var(--cream);margin-bottom:12px">Passage</div>
-        <div style="font-size:14px;color:var(--cream);opacity:.4">October 2026 &mdash; Cairo</div>
-      </div>
-    </div>
-
-    <!-- Social Avatars -->
-    <div style="margin-bottom:64px">
-      <h3>Social Profiles</h3>
-      <div style="display:flex;gap:32px;align-items:flex-start;margin-top:24px;flex-wrap:wrap">
+    <!-- Social Profile -->
+    <div style="margin-bottom:72px">
+      <h3>Social Profile</h3>
+      <div style="display:flex;gap:28px;align-items:flex-start;margin-top:24px;flex-wrap:wrap">
         <div style="text-align:center">
-          <div style="width:64px;height:64px;background:var(--night);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
-            <svg viewBox="0 0 120 120" width="28" height="28" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/></svg>
+          <div style="width:72px;height:72px;background:#1C1917;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
+            <svg viewBox="0 0 200 200" width="28" height="28" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#F2EDE4"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#F2EDE4"/><rect x="72" y="124" width="56" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#F2EDE4" rx="0.5"/></svg>
           </div>
           <div class="app-label">Instagram</div>
         </div>
         <div style="text-align:center">
-          <div style="width:64px;height:64px;background:var(--night);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
-            <svg viewBox="0 0 120 120" width="28" height="28" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#f0ebe0" stroke-width="1.8" stroke-linecap="square"/></svg>
+          <div style="width:72px;height:72px;background:#1C1917;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
+            <svg viewBox="0 0 200 200" width="28" height="28" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#F2EDE4"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#F2EDE4"/><rect x="72" y="124" width="56" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#F2EDE4" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#F2EDE4" rx="0.5"/></svg>
           </div>
           <div class="app-label">X</div>
         </div>
         <div style="text-align:center">
-          <div style="width:64px;height:64px;background:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">
-            <svg viewBox="0 0 120 120" width="28" height="28" fill="none"><line x1="30" y1="92" x2="60" y2="22" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="90" y1="92" x2="60" y2="22" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="27" y1="92" x2="33" y2="92" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/><line x1="87" y1="92" x2="93" y2="92" stroke="#1a1714" stroke-width="1.8" stroke-linecap="square"/></svg>
+          <div style="width:72px;height:72px;background:#F2EDE4;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;border:1px solid #E6DFD3">
+            <svg viewBox="0 0 200 200" width="28" height="28" fill="none"><path d="M 52 160 L 100 40 L 102 40 L 56 160 Z" fill="#1C1917"/><path d="M 148 160 L 100 40 L 98 40 L 144 160 Z" fill="#1C1917"/><rect x="72" y="124" width="56" height="3.5" fill="#1C1917" rx="0.5"/><rect x="42" y="157" width="24" height="3.5" fill="#1C1917" rx="0.5"/><rect x="134" y="157" width="24" height="3.5" fill="#1C1917" rx="0.5"/><rect x="91" y="37" width="18" height="3" fill="#1C1917" rx="0.5"/></svg>
           </div>
           <div class="app-label">LinkedIn</div>
         </div>
       </div>
-      <p style="font-size:13px;opacity:.45;margin-top:16px">The monogram is used at all sizes. No wordmark in social avatars&thinsp;&mdash;&thinsp;the mark must work at 32px.</p>
+      <p style="font-size:12px;opacity:.35;margin-top:14px">The house mark at all sizes. No wordmark in avatars. The mark reads clearly at 32px.</p>
     </div>
 
-    <!-- Packaging Note -->
+    <!-- Packaging -->
     <div>
-      <h3>Packaging</h3>
-      <div class="card" style="background:var(--cream);padding:48px;text-align:center;margin-top:24px;border:1px solid var(--linen)">
-        <div class="wm" style="font-size:24px;opacity:.08;margin-bottom:20px">AZZOY</div>
-        <div style="font-size:13px;opacity:.4;font-style:italic">Blind deboss on uncoated stock</div>
-      </div>
-      <p style="font-size:13px;opacity:.45;margin-top:16px;line-height:1.7">All packaging uses uncoated paper stock. No gloss. No foil. Tissue paper carries a blind deboss of the wordmark. Shopping bags are unbleached cotton, screen-printed. Garment bags are undyed cotton muslin.</p>
+      <h3>Packaging Principles</h3>
+      <p class="bt" style="margin-top:16px">All packaging uses uncoated paper and natural materials. No gloss lamination. No metallic foil. No ribbon. Tissue paper carries a blind deboss of the wordmark. Boxes are undyed kraft, lined with cream tissue. Garment bags are unbleached cotton muslin. The experience should feel like unwrapping something made by hand, not unboxing a purchase.</p>
     </div>
   </div>
 </section>
 
-<!-- ==================== 11. VOICE & COPY ==================== -->
+<!-- ══════════════════ 09 VOICE ══════════════════ -->
 <section class="s sd">
   <div class="c">
     <div class="lab">09 &mdash; Voice &amp; Copy</div>
     <h2>How AZZOY Speaks</h2>
 
     <div class="g2" style="margin-bottom:56px">
-      <div class="voice-card">
-        <div class="voice-title">Say less.</div>
-        <div class="voice-text">If it can be said in three words, do not use ten. If it does not need to be said, do not say it.</div>
+      <div style="padding:24px 0">
+        <div style="font-family:var(--fd);font-size:20px;font-weight:500;margin-bottom:8px">Say less.</div>
+        <div style="font-size:13px;opacity:.55;line-height:1.7">Three words over ten. Silence over noise. If the product is good enough, the copy should barely need to exist.</div>
       </div>
-      <div class="voice-card">
-        <div class="voice-title">State, don&rsquo;t sell.</div>
-        <div class="voice-text">Describe the material, the construction, the origin. Never persuade. Never use urgency. Never use exclamation marks.</div>
+      <div style="padding:24px 0">
+        <div style="font-family:var(--fd);font-size:20px;font-weight:500;margin-bottom:8px">Describe, don&rsquo;t sell.</div>
+        <div style="font-size:13px;opacity:.55;line-height:1.7">Name the fabric. State the weight. Mention the origin. Never persuade, never create urgency, never use exclamation marks.</div>
       </div>
-      <div class="voice-card">
-        <div class="voice-title">Respect the reader.</div>
-        <div class="voice-text">Assume intelligence. Do not explain luxury. Do not use words like &lsquo;exclusive&rsquo;, &lsquo;premium&rsquo;, &lsquo;curated&rsquo;, or &lsquo;elevated&rsquo;.</div>
+      <div style="padding:24px 0">
+        <div style="font-family:var(--fd);font-size:20px;font-weight:500;margin-bottom:8px">Respect intelligence.</div>
+        <div style="font-size:13px;opacity:.55;line-height:1.7">The reader knows what luxury is. Do not explain it to him. Do not use the word &ldquo;luxury&rdquo; at all.</div>
       </div>
-      <div class="voice-card">
-        <div class="voice-title">Write like a caption, not an ad.</div>
-        <div class="voice-text">The tone is a museum wall label. Factual, calm, considered.</div>
+      <div style="padding:24px 0">
+        <div style="font-family:var(--fd);font-size:20px;font-weight:500;margin-bottom:8px">Tone: the museum label.</div>
+        <div style="font-size:13px;opacity:.55;line-height:1.7">Factual. Calm. Brief. The voice of someone who made the object and trusts it completely.</div>
       </div>
     </div>
 
     <div style="margin-bottom:56px">
-      <h3>Banned Words</h3>
-      <div class="banned">
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Exclusive</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Premium</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Curated</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Elevated</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Iconic</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Statement piece</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Must-have</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Drop</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Limited edition</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Game-changer</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Luxe</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Timeless</span>
-        <span style="background:rgba(240,235,224,.08);border-radius:4px">Obsessed</span>
+      <h3>Words We Do Not Use</h3>
+      <div class="banned" style="margin-top:12px">
+        <span style="background:rgba(242,237,228,.07)">Exclusive</span>
+        <span style="background:rgba(242,237,228,.07)">Premium</span>
+        <span style="background:rgba(242,237,228,.07)">Curated</span>
+        <span style="background:rgba(242,237,228,.07)">Elevated</span>
+        <span style="background:rgba(242,237,228,.07)">Iconic</span>
+        <span style="background:rgba(242,237,228,.07)">Statement</span>
+        <span style="background:rgba(242,237,228,.07)">Must-have</span>
+        <span style="background:rgba(242,237,228,.07)">Drop</span>
+        <span style="background:rgba(242,237,228,.07)">Limited edition</span>
+        <span style="background:rgba(242,237,228,.07)">Luxe</span>
+        <span style="background:rgba(242,237,228,.07)">Obsessed</span>
+        <span style="background:rgba(242,237,228,.07)">Game-changer</span>
+        <span style="background:rgba(242,237,228,.07)">Timeless</span>
+        <span style="background:rgba(242,237,228,.07)">Craftsmanship</span>
       </div>
     </div>
 
     <div>
-      <h3>Voice Examples</h3>
-      <div class="g2" style="margin-top:24px">
+      <h3>Examples</h3>
+      <div class="g2" style="margin-top:20px">
         <div>
-          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--sand);margin-bottom:16px">Yes</div>
-          <div class="ex-yes"><div class="ex-text">Egyptian cotton poplin. Two-ply, 100s. Cut in Cairo.</div></div>
-          <div class="ex-yes"><div class="ex-text">The Passage Jacket. Cotton-linen hopsack. Unstructured.</div></div>
-          <div class="ex-yes"><div class="ex-text">Nothing unnecessary.</div></div>
+          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--stone);margin-bottom:14px">This</div>
+          <div class="ex-yes">Egyptian cotton poplin. Two-ply, 100s. Cut in Cairo.</div>
+          <div class="ex-yes">Cotton-linen hopsack. Unstructured. Patch pockets.</div>
+          <div class="ex-yes">AZZOY &mdash; azzoy.co</div>
         </div>
         <div>
-          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#8b5e5e;margin-bottom:16px">No</div>
-          <div class="ex-no"><div class="ex-text">Crafted from the finest premium Egyptian cotton for the discerning gentleman.</div></div>
-          <div class="ex-no"><div class="ex-text">Our iconic statement blazer, curated for the modern man who demands elevated style.</div></div>
-          <div class="ex-no"><div class="ex-text">Redefining the boundaries of luxury fashion with an unwavering commitment to excellence.</div></div>
+          <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#8B6B5E;margin-bottom:14px">Not this</div>
+          <div class="ex-no">Crafted from the finest premium Egyptian cotton for the discerning gentleman.</div>
+          <div class="ex-no">Our iconic unstructured blazer, curated for the modern man who demands elevated style.</div>
+          <div class="ex-no">Luxury redefined. Experience the AZZOY difference.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 12. COLLECTION ONE ==================== -->
+<!-- ══════════════════ 10 COLLECTION ══════════════════ -->
 <section class="s sl">
   <div class="c">
-    <div class="lab">10 &mdash; Collection One: Passage</div>
+    <div class="lab">10 &mdash; Collection One</div>
     <h2>October 2026 &mdash; Cairo</h2>
-    <p class="bt" style="margin-bottom:48px">Ten pieces. Each one earned its position. The collection moves from morning to midnight&thinsp;&mdash;&thinsp;from a cotton poplin shirt for breakfast in Zamalek to a gabardine coat draped over shoulders at a Downtown gallery. Every fabric is natural. Egyptian cotton is the material throughline. Silhouettes are relaxed but precise.</p>
+    <p class="bt" style="margin-bottom:24px">Twelve pieces built for how the AZZOY customer actually lives from October through February in Cairo and beyond. October breaks the heat. Evenings cool to 18&ndash;22&deg;C. The social calendar opens&thinsp;&mdash;&thinsp;dinners, weddings, gallery openings, weekends in Gouna and the North Coast. By December, mornings are 12&ndash;15&deg;C and layering is essential. The collection covers the full range: a shirt worn alone in October, layered under a knit in November, beneath a coat by January.</p>
+    <p class="bt" style="margin-bottom:56px">Every piece is Egyptian cotton-based or cotton-blended. The wardrobe works as a system&thinsp;&mdash;&thinsp;each piece designed to pair with at least three others.</p>
 
-    <!-- Collection Colors -->
-    <div style="display:flex;gap:8px;margin-bottom:56px;flex-wrap:wrap">
-      <div style="width:80px;height:48px;background:#d4c9b5;border-radius:4px;display:flex;align-items:flex-end;padding:4px 8px"><span style="font-size:9px;opacity:.7">Raw Linen</span></div>
-      <div style="width:80px;height:48px;background:#1a1714;border-radius:4px;display:flex;align-items:flex-end;padding:4px 8px"><span style="font-size:9px;color:#f0ebe0;opacity:.7">Kohl</span></div>
-      <div style="width:80px;height:48px;background:#9c6b4a;border-radius:4px;display:flex;align-items:flex-end;padding:4px 8px"><span style="font-size:9px;color:#f0ebe0;opacity:.7">Nile Clay</span></div>
-      <div style="width:80px;height:48px;background:#8a7e6d;border-radius:4px;display:flex;align-items:flex-end;padding:4px 8px"><span style="font-size:9px;color:#f0ebe0;opacity:.7">Dusk</span></div>
-      <div style="width:80px;height:48px;background:#f0ebe0;border-radius:4px;border:1px solid #e8e0d4;display:flex;align-items:flex-end;padding:4px 8px"><span style="font-size:9px;opacity:.7">Alabaster</span></div>
-      <div style="width:80px;height:48px;background:#c49a6c;border-radius:4px;display:flex;align-items:flex-end;padding:4px 8px"><span style="font-size:9px;opacity:.7">Saffron</span></div>
+    <!-- Collection palette -->
+    <div style="display:flex;gap:6px;margin-bottom:56px;flex-wrap:wrap">
+      <div style="width:72px;height:40px;background:#F2EDE4;border-radius:3px;border:1px solid #E6DFD3;display:flex;align-items:flex-end;padding:3px 6px"><span style="font-size:8px;opacity:.5">Cream</span></div>
+      <div style="width:72px;height:40px;background:#E6DFD3;border-radius:3px;display:flex;align-items:flex-end;padding:3px 6px"><span style="font-size:8px;opacity:.5">Linen</span></div>
+      <div style="width:72px;height:40px;background:#1C1917;border-radius:3px;display:flex;align-items:flex-end;padding:3px 6px"><span style="font-size:8px;color:#F2EDE4;opacity:.5">Night</span></div>
+      <div style="width:72px;height:40px;background:#4A4540;border-radius:3px;display:flex;align-items:flex-end;padding:3px 6px"><span style="font-size:8px;color:#F2EDE4;opacity:.5">Ash</span></div>
+      <div style="width:72px;height:40px;background:#8B7355;border-radius:3px;display:flex;align-items:flex-end;padding:3px 6px"><span style="font-size:8px;color:#F2EDE4;opacity:.5">Clay</span></div>
+      <div style="width:72px;height:40px;background:#706A5E;border-radius:3px;display:flex;align-items:flex-end;padding:3px 6px"><span style="font-size:8px;color:#F2EDE4;opacity:.5">Dusk</span></div>
+      <div style="width:72px;height:40px;background:#A8967A;border-radius:3px;display:flex;align-items:flex-end;padding:3px 6px"><span style="font-size:8px;opacity:.5">Stone</span></div>
+      <div style="width:72px;height:40px;background:#B8976A;border-radius:3px;display:flex;align-items:flex-end;padding:3px 6px"><span style="font-size:8px;opacity:.5">Saffron</span></div>
     </div>
 
-    <!-- The 10 Pieces -->
-    <div class="piece"><span class="pn">01</span><div class="pname">The Cairo Shirt</div><div class="pdesc">Relaxed button-down, soft spread collar, slightly dropped shoulder. The foundation piece.</div><div class="pmeta">Giza 88 cotton poplin, 100s two-ply &middot; Alabaster</div></div>
-    <div class="piece"><span class="pn">02</span><div class="pname">The Column Trouser</div><div class="pdesc">High-waisted wide-leg, single front pleat, no taper. Anchors every outfit in the collection.</div><div class="pmeta">Brushed cotton twill, 260gsm &middot; Raw Linen</div></div>
-    <div class="piece"><span class="pn">03</span><div class="pname">The Passage Jacket</div><div class="pdesc">Unstructured blazer, soft shoulder, patch pockets, unlined. The collection&rsquo;s centerpiece&thinsp;&mdash;&thinsp;day to evening.</div><div class="pmeta">Cotton-linen hopsack, open weave &middot; Dusk</div></div>
-    <div class="piece"><span class="pn">04</span><div class="pname">The Weight Tee</div><div class="pdesc">Oversized, dropped shoulder, raw-edge hem. Proves the brand in a single piece.</div><div class="pmeta">Egyptian cotton jersey, 260gsm compact-spun &middot; Kohl</div></div>
-    <div class="piece"><span class="pn">05</span><div class="pname">The Nile Knit</div><div class="pdesc">Fine-gauge crew neck, ribbed hem and cuffs. Evening warmth, quiet refinement.</div><div class="pmeta">Giza 45 cotton, 14-gauge &middot; Nile Clay</div></div>
-    <div class="piece"><span class="pn">06</span><div class="pname">The Atelier Coat</div><div class="pdesc">Knee-length, hidden placket, notch lapel, deep side vents. The statement of authority.</div><div class="pmeta">Cotton-wool gabardine, 300gsm &middot; Kohl</div></div>
-    <div class="piece"><span class="pn">07</span><div class="pname">The Draft Overshirt</div><div class="pdesc">Boxy silhouette, chest patch pocket, buttoned cuffs. Bridges tee and jacket.</div><div class="pmeta">Washed cotton canvas, 240gsm &middot; Saffron Dust</div></div>
-    <div class="piece"><span class="pn">08</span><div class="pname">The Ease Trouser</div><div class="pdesc">Drawstring waist, tapered leg, elasticated back. For days that still need to look right.</div><div class="pmeta">Cotton-linen blend, 200gsm &middot; Alabaster</div></div>
-    <div class="piece"><span class="pn">09</span><div class="pname">The Terrace Polo</div><div class="pdesc">Long-sleeve, three-button placket, ribbed collar. Between tee and shirt, for Friday evenings.</div><div class="pmeta">Egyptian cotton piqu&eacute;, 220gsm &middot; Dusk</div></div>
-    <div class="piece"><span class="pn">10</span><div class="pname">The Fold Scarf</div><div class="pdesc">70&times;200cm oversized rectangular wrap. The finishing gesture&thinsp;&mdash;&thinsp;signature piece for imagery.</div><div class="pmeta">Cotton-cashmere twill, 180gsm &middot; Saffron Dust</div></div>
+    <!-- PIECE 01 -->
+    <div class="piece">
+      <div class="pn">01</div>
+      <div>
+        <div class="pname">The Cairo Shirt</div>
+        <div class="pdesc">Relaxed-fit button-down with a soft spread collar and slightly dropped shoulder. Single-needle stitching. Mother-of-pearl buttons. The shirt a man reaches for without thinking&thinsp;&mdash;&thinsp;it must be perfect.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Egyptian Giza 88 cotton poplin, two-ply, 100s &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> Relaxed through body, natural shoulder</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#F2EDE4"></div>
+          <div class="pcolor" style="background:#E6DFD3"></div>
+          <div class="pcolor" style="background:#1C1917"></div>
+          <span class="pcolor-label">Cream, Linen, Night</span>
+        </div>
+        <div class="ppairs">Pairs with: Column Trouser, Ease Trouser, under the Passage Jacket or Atelier Coat</div>
+      </div>
+    </div>
+
+    <!-- PIECE 02 -->
+    <div class="piece">
+      <div class="pn">02</div>
+      <div>
+        <div class="pname">The Column Trouser</div>
+        <div class="pdesc">High-waisted wide-leg trouser with a single front pleat and clean straight fall. No taper. Side-seam pockets only. The vertical line that anchors the wardrobe.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Brushed Egyptian cotton twill, 280gsm &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> High rise, wide straight leg</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#E6DFD3"></div>
+          <div class="pcolor" style="background:#4A4540"></div>
+          <div class="pcolor" style="background:#1C1917"></div>
+          <span class="pcolor-label">Linen, Ash, Night</span>
+        </div>
+        <div class="ppairs">Pairs with: Every top in the collection. Foundation bottom.</div>
+      </div>
+    </div>
+
+    <!-- PIECE 03 -->
+    <div class="piece">
+      <div class="pn">03</div>
+      <div>
+        <div class="pname">The Passage Jacket</div>
+        <div class="pdesc">Unstructured soft-shoulder blazer with patch pockets and no lining. The weight is light enough for a Cairo October evening, refined enough for a private dinner. No padding, no fusing. The fabric does the work.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Cotton-linen hopsack, open weave, 220gsm &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> Relaxed, slightly shortened body</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#706A5E"></div>
+          <div class="pcolor" style="background:#A8967A"></div>
+          <span class="pcolor-label">Dusk, Stone</span>
+        </div>
+        <div class="ppairs">Pairs with: Cairo Shirt, Weight Tee, Column Trouser, Ease Trouser</div>
+      </div>
+    </div>
+
+    <!-- PIECE 04 -->
+    <div class="piece">
+      <div class="pn">04</div>
+      <div>
+        <div class="pname">The Weight Tee</div>
+        <div class="pdesc">Heavyweight tee with dropped shoulder and bound neckline. 260gsm compact-spun Egyptian cotton gives it a substantial hand that holds its shape wash after wash. This is not a basic&thinsp;&mdash;&thinsp;it is the piece that proves the brand&rsquo;s material commitment.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Egyptian cotton jersey, 260gsm, compact-spun &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> Oversized, dropped shoulder</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#1C1917"></div>
+          <div class="pcolor" style="background:#F2EDE4"></div>
+          <div class="pcolor" style="background:#706A5E"></div>
+          <span class="pcolor-label">Night, Cream, Dusk</span>
+        </div>
+        <div class="ppairs">Pairs with: Column Trouser, under Passage Jacket, under Atelier Coat, with Ease Trouser</div>
+      </div>
+    </div>
+
+    <!-- PIECE 05 -->
+    <div class="piece">
+      <div class="pn">05</div>
+      <div>
+        <div class="pname">The Nile Knit</div>
+        <div class="pdesc">Fine-gauge crew neck in 14-gauge Giza 45 cotton. Lightweight enough for Cairo evenings, refined enough to wear alone at a dinner. Ribbed hem and cuffs. The kind of knit you reach for when the temperature drops ten degrees after sunset.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Giza 45 Egyptian cotton, 14-gauge &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> True to size, clean body</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#8B7355"></div>
+          <div class="pcolor" style="background:#4A4540"></div>
+          <div class="pcolor" style="background:#F2EDE4"></div>
+          <span class="pcolor-label">Clay, Ash, Cream</span>
+        </div>
+        <div class="ppairs">Pairs with: Cairo Shirt (underneath), Column Trouser, under Atelier Coat</div>
+      </div>
+    </div>
+
+    <!-- PIECE 06 -->
+    <div class="piece">
+      <div class="pn">06</div>
+      <div>
+        <div class="pname">The Atelier Coat</div>
+        <div class="pdesc">Knee-length unlined coat with hidden button placket, notch lapel, and deep side vents. Cotton-wool gabardine at 320gsm gives it real body without bulk. The coat you drape over your shoulders walking through Zamalek at night, or wear properly buttoned on a cold January morning.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Cotton-wool gabardine, 320gsm (70/30 cotton-wool) &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> Straight, slightly oversized</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#1C1917"></div>
+          <div class="pcolor" style="background:#4A4540"></div>
+          <span class="pcolor-label">Night, Ash</span>
+        </div>
+        <div class="ppairs">Pairs with: Everything. The collection&rsquo;s outermost layer.</div>
+      </div>
+    </div>
+
+    <!-- PIECE 07 -->
+    <div class="piece">
+      <div class="pn">07</div>
+      <div>
+        <div class="pname">The Draft Overshirt</div>
+        <div class="pdesc">Boxy overshirt with chest patch pocket and buttoned cuffs. The bridge between a shirt and a jacket&thinsp;&mdash;&thinsp;worn open over a tee in October, or buttoned as a shirt-jacket through November. Washed cotton canvas that softens with every wear.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Washed cotton canvas, 260gsm &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> Boxy, straight hem</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#B8976A"></div>
+          <div class="pcolor" style="background:#706A5E"></div>
+          <span class="pcolor-label">Saffron, Dusk</span>
+        </div>
+        <div class="ppairs">Pairs with: Weight Tee, Cairo Shirt, Column Trouser, Ease Trouser</div>
+      </div>
+    </div>
+
+    <!-- PIECE 08 -->
+    <div class="piece">
+      <div class="pn">08</div>
+      <div>
+        <div class="pname">The Ease Trouser</div>
+        <div class="pdesc">Drawstring-waist trouser with an elasticated back panel and tapered leg. The trouser for days off that still need to look considered. Cotton-linen at 200gsm for a dry, easy hand.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Cotton-linen blend, 200gsm &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> Relaxed waist, tapered leg</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#F2EDE4"></div>
+          <div class="pcolor" style="background:#A8967A"></div>
+          <span class="pcolor-label">Cream, Stone</span>
+        </div>
+        <div class="ppairs">Pairs with: Weight Tee, Terrace Polo, Draft Overshirt</div>
+      </div>
+    </div>
+
+    <!-- PIECE 09 -->
+    <div class="piece">
+      <div class="pn">09</div>
+      <div>
+        <div class="pname">The Terrace Polo</div>
+        <div class="pdesc">Long-sleeve polo with a three-button placket and flat-knit collar. Not sporty&thinsp;&mdash;&thinsp;refined. The piece that sits between a tee and a shirt for evenings where a collar matters but a button-down is too much. Egyptian cotton piqu&eacute; with a dry, smooth hand.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Egyptian cotton piqu&eacute;, 220gsm &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> Slim-relaxed, slightly longer body</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#706A5E"></div>
+          <div class="pcolor" style="background:#1C1917"></div>
+          <div class="pcolor" style="background:#F2EDE4"></div>
+          <span class="pcolor-label">Dusk, Night, Cream</span>
+        </div>
+        <div class="ppairs">Pairs with: Column Trouser, Ease Trouser, under Passage Jacket</div>
+      </div>
+    </div>
+
+    <!-- PIECE 10 -->
+    <div class="piece">
+      <div class="pn">10</div>
+      <div>
+        <div class="pname">The Half-Zip</div>
+        <div class="pdesc">Mock-neck half-zip in 12-gauge cotton-cashmere. The elevated mid-layer for December through February. Worn alone over a shirt, or beneath the Atelier Coat. The zipper is hidden, the collar stands clean, the fabric has warmth without weight.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Cotton-cashmere blend, 12-gauge (70/30) &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> True to size, slightly fitted</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#4A4540"></div>
+          <div class="pcolor" style="background:#8B7355"></div>
+          <span class="pcolor-label">Ash, Clay</span>
+        </div>
+        <div class="ppairs">Pairs with: Cairo Shirt (underneath), Column Trouser, under Atelier Coat</div>
+      </div>
+    </div>
+
+    <!-- PIECE 11 -->
+    <div class="piece">
+      <div class="pn">11</div>
+      <div>
+        <div class="pname">The Five-Pocket</div>
+        <div class="pdesc">Clean five-pocket trouser in Japanese-woven cotton selvedge. Not jeans&thinsp;&mdash;&thinsp;no rivets, no contrast stitching, no branding. The shape of a five-pocket with the refinement of a dress trouser. Rinsed once, raw feel.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> 13oz Japanese selvedge cotton, one rinse &middot; <strong style="font-weight:500;opacity:.7">Fit:</strong> Straight, mid-rise</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#1C1917"></div>
+          <span class="pcolor-label">Night (raw indigo reads as near-black)</span>
+        </div>
+        <div class="ppairs">Pairs with: Cairo Shirt, Weight Tee, Nile Knit, Draft Overshirt, Atelier Coat</div>
+      </div>
+    </div>
+
+    <!-- PIECE 12 -->
+    <div class="piece">
+      <div class="pn">12</div>
+      <div>
+        <div class="pname">The Fold Scarf</div>
+        <div class="pdesc">Oversized rectangular scarf, 70&times;200cm. Draped around the neck for evening warmth, folded over a shoulder for texture, or carried. The finishing gesture that completes every outfit in the collection from November onward.</div>
+        <div class="pmeta"><strong style="font-weight:500;opacity:.7">Fabric:</strong> Cotton-cashmere twill, 180gsm (60/40) &middot; <strong style="font-weight:500;opacity:.7">Size:</strong> 70 &times; 200cm</div>
+        <div class="pcolors">
+          <div class="pcolor" style="background:#B8976A"></div>
+          <div class="pcolor" style="background:#A8967A"></div>
+          <span class="pcolor-label">Saffron, Stone</span>
+        </div>
+        <div class="ppairs">Pairs with: Atelier Coat, Passage Jacket, Nile Knit. The signature piece for campaign imagery.</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ==================== 13. RATIONALE ==================== -->
+<!-- ══════════════════ 11 WARDROBE SYSTEM ══════════════════ -->
 <section class="s sd">
   <div class="c">
-    <div class="lab">Rationale</div>
-    <h2>Why These Ten</h2>
-    <p style="font-size:17px;line-height:2;max-width:700px;opacity:.75">Ten pieces. Each one earned its position. Collection One: Passage is built for October in Cairo&thinsp;&mdash;&thinsp;the month the city exhales. Days are still warm, evenings turn cool, and the social calendar opens. The collection moves from morning to midnight: a cotton poplin shirt for a slow breakfast in Zamalek, a fine-gauge knit for dinner on a Nile terrace, a gabardine coat draped over shoulders at a gallery in Downtown. Every fabric is natural. Egyptian cotton runs through the collection as a material signature&thinsp;&mdash;&thinsp;not as a marketing line, but because it is the finest fiber for this climate and this house. Silhouettes are relaxed but precise. No piece is decorative. Nothing is unnecessary.</p>
+    <div class="lab">11 &mdash; Wardrobe System</div>
+    <h2>How the Collection Works Together</h2>
+    <p class="bt" style="margin-bottom:48px">Every piece in the collection connects to at least three others. Below are five complete outfits showing how the wardrobe builds from a single shirt to a full cold-weather look.</p>
+
+    <div class="g2" style="gap:20px;margin-bottom:32px">
+      <div class="outfit">
+        <div class="outfit-title">October Morning</div>
+        <div class="outfit-pieces">Cairo Shirt (Cream) + Column Trouser (Linen)<br><span style="opacity:.6">Simple. Warm. The shirt and trouser carry everything.</span></div>
+      </div>
+      <div class="outfit">
+        <div class="outfit-title">October Evening</div>
+        <div class="outfit-pieces">Weight Tee (Night) + Column Trouser (Ash) + Passage Jacket (Dusk)<br><span style="opacity:.6">The jacket does the talking. Dark tee underneath.</span></div>
+      </div>
+      <div class="outfit">
+        <div class="outfit-title">November Dinner</div>
+        <div class="outfit-pieces">Cairo Shirt (Cream) + Nile Knit (Clay) + Column Trouser (Night) + Fold Scarf (Saffron)<br><span style="opacity:.6">Layered warmth. The scarf adds color to a restrained palette.</span></div>
+      </div>
+      <div class="outfit">
+        <div class="outfit-title">December Weekend</div>
+        <div class="outfit-pieces">Weight Tee (Cream) + Draft Overshirt (Saffron) + Five-Pocket (Night) + Fold Scarf (Stone)<br><span style="opacity:.6">Relaxed but sharp. The overshirt and denim ground it.</span></div>
+      </div>
+      <div class="outfit">
+        <div class="outfit-title">January Evening</div>
+        <div class="outfit-pieces">Cairo Shirt (Linen) + Half-Zip (Ash) + Column Trouser (Night) + Atelier Coat (Night)<br><span style="opacity:.6">Full layering. The coat completes the silhouette.</span></div>
+      </div>
+      <div class="outfit">
+        <div class="outfit-title">Gouna Weekend</div>
+        <div class="outfit-pieces">Terrace Polo (Cream) + Ease Trouser (Stone)<br><span style="opacity:.6">Easy. No effort needed. The fabric does the work.</span></div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;opacity:.4;line-height:1.7;max-width:600px">The twelve pieces generate over thirty complete outfits. A customer who buys four pieces has a working wardrobe. A customer who buys eight has a complete one. This is the product logic&thinsp;&mdash;&thinsp;everything connects, nothing is isolated.</p>
   </div>
 </section>
 
-<!-- ==================== 14. DOS & DON'TS ==================== -->
+<!-- ══════════════════ 12 STANDARDS ══════════════════ -->
 <section class="s sl">
   <div class="c">
-    <div class="lab">11 &mdash; Standards</div>
+    <div class="lab">12 &mdash; Standards</div>
     <h2>Dos &amp; Don&rsquo;ts</h2>
-    <div class="g2" style="margin-top:32px">
+    <div class="g2" style="margin-top:28px">
       <div>
-        <h3 style="color:var(--sand);font-size:16px;font-family:var(--fb);font-weight:500;margin-bottom:24px">Do</h3>
-        <div class="do-item">Use the wordmark at generous scale with ample clear space</div>
+        <h3 style="color:var(--stone);font-family:var(--fb);font-size:14px;font-weight:500;margin-bottom:20px">Do</h3>
+        <div class="do-item">Use the wordmark at generous scale with clear space</div>
         <div class="do-item">Let negative space dominate every composition</div>
-        <div class="do-item">Describe product through material and construction</div>
-        <div class="do-item">Photograph in natural light on raw surfaces</div>
-        <div class="do-item">Use the monogram for small-format applications only</div>
-        <div class="do-item">Maintain quiet, factual tone in all communications</div>
-        <div class="do-item">Use uncoated, natural paper stocks for all print</div>
+        <div class="do-item">Describe product through material, weight, and origin</div>
+        <div class="do-item">Photograph in natural light on raw, tactile surfaces</div>
+        <div class="do-item">Use the house mark only where space requires it</div>
+        <div class="do-item">Use uncoated, natural stocks for all print</div>
+        <div class="do-item">Keep the website spare&thinsp;&mdash;&thinsp;product and white space</div>
+        <div class="do-item">Write copy that respects the reader&rsquo;s intelligence</div>
       </div>
       <div>
-        <h3 style="color:#8b5e5e;font-size:16px;font-family:var(--fb);font-weight:500;margin-bottom:24px">Don&rsquo;t</h3>
-        <div class="dont-item">Place the logo on busy backgrounds or over images</div>
-        <div class="dont-item">Use metallic foils, gloss lamination, or bright colors</div>
+        <h3 style="color:#8B6B5E;font-family:var(--fb);font-size:14px;font-weight:500;margin-bottom:20px">Don&rsquo;t</h3>
+        <div class="dont-item">Place the logo on busy backgrounds or photographs</div>
+        <div class="dont-item">Use metallic foils, gloss finishes, or bright colors</div>
         <div class="dont-item">Write copy that sells, persuades, or creates urgency</div>
-        <div class="dont-item">Use lifestyle photography with models smiling or posing</div>
-        <div class="dont-item">Stretch, rotate, outline, or add effects to the wordmark</div>
-        <div class="dont-item">Use the word &ldquo;luxury&rdquo; in any customer-facing communication</div>
-        <div class="dont-item">Deviate from the type system for any brand material</div>
+        <div class="dont-item">Use lifestyle imagery with posed or smiling models</div>
+        <div class="dont-item">Distort, rotate, outline, or add effects to any mark</div>
+        <div class="dont-item">Use the word &ldquo;luxury&rdquo; in any external communication</div>
+        <div class="dont-item">Use typefaces outside the brand system</div>
+        <div class="dont-item">Place logos on the outside of any garment</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 15. SLOGAN & BIO ==================== -->
-<section class="s sd" style="text-align:center;padding:140px 40px">
+<!-- ══════════════════ SLOGAN & BIO ══════════════════ -->
+<section class="s sd" style="text-align:center;padding:140px 48px">
   <div class="c">
-    <div style="font-family:var(--fd);font-size:clamp(28px,5vw,48px);font-weight:400;font-style:italic;margin-bottom:40px;opacity:.9">Nothing unnecessary.</div>
-    <div class="div" style="margin:40px auto"></div>
-    <div style="margin-top:40px">
-      <div class="wm" style="font-size:14px;margin-bottom:12px">AZZOY</div>
-      <div style="font-size:14px;font-weight:300;opacity:.6;line-height:1.8">Nothing unnecessary.<br><span style="opacity:.5">Cairo &mdash; azzoy.com</span></div>
-    </div>
-    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.25em;opacity:.25;margin-top:48px">Instagram Bio</div>
+    <div style="font-family:var(--fd);font-size:clamp(24px,4.5vw,42px);font-weight:300;font-style:italic;margin-bottom:48px;opacity:.8">The pleasure of wearing something truly well made.</div>
+    <div style="width:40px;height:1px;background:var(--cream);opacity:.1;margin:0 auto 48px"></div>
+    <div class="wm" style="font-size:14px;margin-bottom:14px">AZZOY</div>
+    <div style="font-size:13px;font-weight:300;opacity:.45;line-height:2">azzoy.co<br>Cairo</div>
+    <div style="font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.3em;opacity:.2;margin-top:48px">Instagram Bio</div>
   </div>
 </section>
 
-<!-- ==================== 16. CLOSING ==================== -->
-<section class="cover" style="min-height:60vh">
-  <div class="wm" style="font-size:clamp(48px,10vw,100px);margin-bottom:24px">AZZOY</div>
-  <div style="font-family:var(--fd);font-size:20px;font-weight:400;font-style:italic;opacity:.5;margin-bottom:40px">Nothing unnecessary.</div>
-  <div style="width:48px;height:1px;background:var(--cream);opacity:.15;margin-bottom:40px"></div>
-  <div style="font-size:11px;letter-spacing:.15em;opacity:.25">&copy; 2026 &mdash; All rights reserved &mdash; Confidential</div>
+<!-- ══════════════════ CLOSING ══════════════════ -->
+<section class="cover" style="min-height:50vh">
+  <div class="wm" style="font-size:clamp(44px,10vw,96px);margin-bottom:48px">AZZOY</div>
+  <div style="width:40px;height:1px;background:var(--cream);opacity:.1;margin-bottom:48px"></div>
+  <div style="font-size:10px;letter-spacing:.2em;opacity:.2">&copy; 2026 &middot; All rights reserved &middot; Confidential</div>
 </section>
 
 <footer class="foot">AZZOY &copy; 2026</footer>
