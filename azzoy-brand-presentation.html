@@ -4,797 +4,822 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AZZOY — Brand & Launch Presentation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-  :root {
-    --night: #1a1714;
-    --sandstone: #c4a882;
-    --cream: #f0ebe0;
-    --warm-white: #faf7f2;
-    --linen: #e8e0d4;
-    --charcoal: #3d3832;
-    --terracotta: #b8704a;
-    --olive-stone: #6b6352;
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Inter', -apple-system, sans-serif;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--font-body);
-    font-weight: 400;
-    color: var(--night);
-    background: var(--warm-white);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.7;
-  }
-
-  /* ---------- UTILITIES ---------- */
-  .section { padding: 100px 24px; }
-  .section--dark { background: var(--night); color: var(--cream); }
-  .section--light { background: var(--warm-white); color: var(--night); }
-  .section--cream { background: var(--cream); color: var(--night); }
-
-  .container { max-width: 1080px; margin: 0 auto; }
-
-  .section-label {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.5;
-    margin-bottom: 40px;
-  }
-
-  .section-title {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(28px, 4vw, 42px);
-    line-height: 1.2;
-    margin-bottom: 32px;
-  }
-
-  .body-text {
-    font-size: 16px;
-    line-height: 1.8;
-    max-width: 640px;
-    opacity: 0.85;
-  }
-
-  .divider {
-    width: 48px;
-    height: 1px;
-    background: currentColor;
-    opacity: 0.25;
-    margin: 48px 0;
-  }
-
-  /* ---------- 1. COVER ---------- */
-  .cover {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: var(--night);
-    color: var(--cream);
-    padding: 60px 24px;
-  }
-
-  .cover-wordmark {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(64px, 14vw, 160px);
-    letter-spacing: 0.35em;
-    text-indent: 0.35em;
-    line-height: 1;
-    margin-bottom: 40px;
-  }
-
-  .cover-subtitle {
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    opacity: 0.5;
-  }
-
-  /* ---------- 2. BRAND ESSENCE ---------- */
-  .tagline {
-    font-family: var(--font-display);
-    font-weight: 500;
-    font-style: italic;
-    font-size: clamp(22px, 3vw, 32px);
-    line-height: 1.4;
-    margin-bottom: 40px;
-    color: var(--sandstone);
-  }
-
-  .brand-statement {
-    font-size: 17px;
-    line-height: 1.9;
-    max-width: 620px;
-    opacity: 0.8;
-  }
-
-  /* ---------- 3. LOGO SYSTEM ---------- */
-  .logo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-    margin-top: 48px;
-  }
-
-  .logo-card {
-    border-radius: 12px;
-    padding: 60px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 220px;
-    transition: transform 0.3s ease;
-  }
-
-  .logo-card:hover { transform: translateY(-3px); }
-
-  .logo-card--dark {
-    background: var(--night);
-    color: var(--cream);
-  }
-
-  .logo-card--light {
-    background: var(--cream);
-    color: var(--night);
-    border: 1px solid var(--linen);
-  }
-
-  .logo-card--mono {
-    background: var(--night);
-    color: var(--cream);
-  }
-
-  .logo-card .wordmark {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 48px;
-    letter-spacing: 0.35em;
-    text-indent: 0.35em;
-  }
-
-  .logo-card .card-label {
-    font-family: var(--font-body);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    opacity: 0.45;
-    margin-top: 20px;
-  }
-
-  .monogram-circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 1.5px solid var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 42px;
-    letter-spacing: 0.05em;
-  }
-
-  .logo-note {
-    font-size: 14px;
-    opacity: 0.6;
-    margin-top: 48px;
-    max-width: 500px;
-  }
-
-  /* ---------- 4. TYPOGRAPHY ---------- */
-  .type-showcase { margin-top: 48px; }
-
-  .type-block {
-    margin-bottom: 56px;
-  }
-
-  .type-block-label {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    opacity: 0.4;
-    margin-bottom: 16px;
-  }
-
-  .type-block-name {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--sandstone);
-  }
-
-  .type-sample-display {
-    font-family: var(--font-display);
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 8px;
-  }
-
-  .type-sample-body {
-    font-family: var(--font-body);
-    line-height: 1.6;
-    margin-bottom: 8px;
-  }
-
-  .type-scale { margin-top: 56px; }
-
-  .type-scale-row {
-    display: flex;
-    align-items: baseline;
-    gap: 24px;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(26,23,20,0.08);
-  }
-
-  .type-scale-label {
-    font-family: var(--font-body);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    opacity: 0.4;
-    min-width: 80px;
-    flex-shrink: 0;
-  }
-
-  .type-scale-sample {
-    font-family: var(--font-display);
-    font-weight: 700;
-  }
-
-  /* ---------- 5. SOCIAL PROFILE ---------- */
-  .social-section { text-align: center; }
-
-  .social-avatar {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 40px;
-    border-radius: 16px;
-    background: var(--night);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 12px 40px rgba(26,23,20,0.15);
-  }
-
-  .social-note {
-    font-size: 15px;
-    opacity: 0.7;
-    max-width: 420px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-
-  /* ---------- 6. COLOR SYSTEM ---------- */
-  .palette-group {
-    margin-bottom: 56px;
-  }
-
-  .palette-title {
-    font-family: var(--font-body);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-    opacity: 0.55;
-  }
-
-  .swatches {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-
-  .swatch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .swatch-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-  }
-
-  .swatch-circle:hover { transform: scale(1.12); }
-
-  .swatch-name {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-  }
-
-  .swatch-hex {
-    font-size: 11px;
-    opacity: 0.5;
-    font-family: var(--font-body);
-    letter-spacing: 0.03em;
-  }
-
-  .section--dark .swatch-circle { border-color: rgba(240,235,224,0.15); }
-
-  .palette-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-  }
-
-  @media (max-width: 640px) {
-    .palette-columns { grid-template-columns: 1fr; gap: 48px; }
-  }
-
-  /* ---------- 7. COLLECTION ---------- */
-  .collection-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 48px;
-  }
-
-  .piece-card {
-    background: rgba(26,23,20,0.03);
-    border-radius: 10px;
-    padding: 32px 28px 28px 28px;
-    border-left: 4px solid var(--sandstone);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .piece-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(26,23,20,0.08);
-  }
-
-  .piece-number {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    opacity: 0.35;
-    margin-bottom: 8px;
-  }
-
-  .piece-name {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 22px;
-    margin-bottom: 10px;
-    line-height: 1.25;
-  }
-
-  .piece-desc {
-    font-size: 14px;
-    opacity: 0.7;
-    margin-bottom: 16px;
-    line-height: 1.6;
-  }
-
-  .piece-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .piece-meta span {
-    font-size: 12px;
-    opacity: 0.5;
-    letter-spacing: 0.03em;
-  }
-
-  .piece-meta strong {
-    font-weight: 600;
-    opacity: 0.7;
-  }
-
-  /* ---------- 8. RATIONALE ---------- */
-  .rationale-text {
-    font-size: 17px;
-    line-height: 2;
-    max-width: 660px;
-    opacity: 0.8;
-  }
-
-  /* ---------- 9. SLOGAN & BIO ---------- */
-  .slogan-card {
-    background: var(--night);
-    color: var(--cream);
-    border-radius: 14px;
-    padding: 64px 48px;
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .slogan-text {
-    font-family: var(--font-display);
-    font-weight: 500;
-    font-style: italic;
-    font-size: clamp(24px, 3.5vw, 36px);
-    line-height: 1.4;
-    margin-bottom: 40px;
-  }
-
-  .bio-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    opacity: 0.4;
-    margin-bottom: 14px;
-  }
-
-  .bio-text {
-    font-size: 15px;
-    line-height: 1.7;
-    opacity: 0.7;
-  }
-
-  /* ---------- 10. FOOTER ---------- */
-  .footer {
-    background: var(--night);
-    color: var(--cream);
-    text-align: center;
-    padding: 48px 24px;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    opacity: 0.4;
-  }
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 768px) {
-    .section { padding: 72px 20px; }
-    .logo-grid { grid-template-columns: 1fr; }
-    .collection-grid { grid-template-columns: 1fr; }
-    .slogan-card { padding: 48px 28px; }
-    .swatches { gap: 20px; }
-  }
+:root {
+  --night: #1a1714;
+  --sandstone: #c4a882;
+  --cream: #f0ebe0;
+  --warm-white: #faf7f2;
+  --linen: #e8e0d4;
+  --charcoal: #3d3832;
+  --raw-linen: #d4c9b5;
+  --kohl: #1a1714;
+  --nile-clay: #9c6b4a;
+  --dusk: #8a7e6d;
+  --alabaster: #f0ebe0;
+  --saffron-dust: #c49a6c;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, Helvetica Neue, sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--night);
+  background: var(--warm-white);
+  line-height: 1.7;
+}
+
+.section { padding: 110px 40px; }
+.section-dark { background: var(--night); color: var(--cream); }
+.section-light { background: var(--warm-white); color: var(--night); }
+.section-cream { background: var(--cream); color: var(--night); }
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.5;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-bottom: 36px;
+}
+
+p { max-width: 680px; }
+
+/* ---- COVER ---- */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--night);
+  color: var(--cream);
+  padding: 60px 40px;
+}
+
+.cover-wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  letter-spacing: 0.35em;
+  margin-right: -0.35em;
+  margin-bottom: 44px;
+}
+
+.cover-subtitle {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+  color: var(--sandstone);
+}
+
+.cover-meta {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  margin-bottom: 12px;
+}
+
+.cover-confidential {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  opacity: 0.35;
+  margin-top: 56px;
+}
+
+/* ---- IDENTITY CARDS ---- */
+.identity-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.identity-card {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.identity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.identity-card-dark {
+  background: var(--night);
+  color: var(--cream);
+}
+
+.identity-card-light {
+  background: var(--warm-white);
+  color: var(--night);
+  border: 1px solid var(--linen);
+}
+
+.identity-card .wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  letter-spacing: 0.35em;
+  margin-right: -0.35em;
+}
+
+.identity-note {
+  font-size: 0.88rem;
+  opacity: 0.65;
+  max-width: 700px;
+  line-height: 1.75;
+}
+
+/* ---- MONOGRAM ---- */
+.monogram-large {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 48px;
+}
+
+/* ---- SOCIAL AVATAR ---- */
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0;
+}
+
+.avatar-box {
+  width: 200px;
+  height: 200px;
+  background: var(--night);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- TYPOGRAPHY SECTION ---- */
+.type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.type-block h3 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.type-sample-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.type-sample-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+.type-weights {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.type-weight-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.type-weight-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+  min-width: 100px;
+}
+
+/* ---- COLOR PALETTES ---- */
+.palette-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 48px;
+}
+
+.palette-group-title {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.5;
+  margin-bottom: 28px;
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.swatch-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.swatch-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.swatch-hex {
+  font-size: 0.68rem;
+  opacity: 0.45;
+  font-family: var(--font-body);
+  text-align: center;
+}
+
+/* ---- COLLECTION GRID ---- */
+.pieces-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.piece-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 36px 36px 36px 40px;
+  border-left: 4px solid var(--linen);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.piece-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 36px rgba(0,0,0,0.07);
+}
+
+.piece-number {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.4;
+  margin-bottom: 8px;
+}
+
+.piece-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.piece-description {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  opacity: 0.8;
+}
+
+.piece-detail {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.piece-detail-label {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+  opacity: 0.5;
+}
+
+.piece-role {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--linen);
+  font-size: 0.82rem;
+  font-style: italic;
+  opacity: 0.65;
+  line-height: 1.65;
+}
+
+/* ---- RATIONALE ---- */
+.rationale-text {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.85;
+  max-width: 780px;
+  color: var(--cream);
+  opacity: 0.9;
+}
+
+/* ---- SLOGAN ---- */
+.slogan-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--linen);
+  margin: 0 auto 56px;
+}
+
+.bio-card {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 40px 48px;
+  max-width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bio-card-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.25em;
+  margin-bottom: 8px;
+}
+
+.bio-card-slogan {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.bio-card-location {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.82rem;
+  opacity: 0.5;
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  background: var(--night);
+  color: var(--cream);
+  text-align: center;
+  padding: 56px 40px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 820px) {
+  .section { padding: 80px 28px; }
+  .identity-row { grid-template-columns: 1fr; gap: 16px; }
+  .identity-card { aspect-ratio: 3 / 2; }
+  .type-grid { grid-template-columns: 1fr; gap: 36px; }
+  .palette-groups { grid-template-columns: 1fr; gap: 48px; }
+  .pieces-grid { grid-template-columns: 1fr; }
+  .piece-card { padding: 28px 28px 28px 32px; }
+}
 </style>
 </head>
 <body>
 
-<!-- ===== 1. COVER ===== -->
+<!-- ============================================================
+     SECTION 1: COVER
+     ============================================================ -->
 <section class="cover">
-  <div class="cover-wordmark">AZZOY</div>
-  <div class="cover-subtitle">Brand &amp; Launch Presentation &mdash; April 2026</div>
-</section>
-
-<!-- ===== 2. BRAND ESSENCE ===== -->
-<section class="section section--light">
-  <div class="container">
-    <div class="section-label">01 &mdash; Brand Essence</div>
-    <div class="section-title">Quiet Egyptian Luxury</div>
-    <div class="tagline">&ldquo;Rooted in craft. Made to endure.&rdquo;</div>
-    <div class="brand-statement">
-      AZZOY is a product-first luxury house from Egypt. It builds garments with the rigor of architecture and the restraint of old-world craft. No logos on display. No trend-chasing. Only material, cut, and intention.
-    </div>
+  <div>
+    <div class="cover-wordmark">AZZOY</div>
+    <div class="cover-subtitle">Collection One: Passage</div>
+    <div class="cover-meta">October 2026 — Cairo</div>
+    <div class="cover-confidential">Brand & Launch Presentation — Confidential</div>
   </div>
 </section>
 
-<!-- ===== 3. FINAL LOGO SYSTEM ===== -->
-<section class="section section--cream">
+<!-- ============================================================
+     SECTION 2: BRAND ESSENCE
+     ============================================================ -->
+<section class="section section-light">
   <div class="container">
-    <div class="section-label">02 &mdash; Logo System</div>
-    <div class="section-title">Wordmark-Led Identity</div>
-    <div class="logo-grid">
-      <div class="logo-card logo-card--dark">
-        <div class="wordmark">AZZOY</div>
-        <div class="card-label">Cream on Dark</div>
-      </div>
-      <div class="logo-card logo-card--light">
-        <div class="wordmark">AZZOY</div>
-        <div class="card-label">Dark on Cream</div>
-      </div>
-      <div class="logo-card logo-card--mono">
-        <div class="monogram-circle">A</div>
-        <div class="card-label">Supporting Monogram</div>
-      </div>
-    </div>
-    <p class="logo-note">The wordmark is the primary identity. No icon needed. The monogram serves as a supporting mark for compact use cases&thinsp;&mdash;&thinsp;social avatars, labels, embossing.</p>
+    <div class="section-label">01 — Philosophy</div>
+    <h2>Nothing Unnecessary</h2>
+    <p>AZZOY is a luxury house from Egypt. It exists to make garments of uncommon quality — and nothing else. No logos worn on the outside. No seasonal reinvention for its own sake. No performance of luxury. Only material, cut, and the quiet confidence of clothes that do not need to explain themselves. The name carries the weight. The product carries the proof.</p>
   </div>
 </section>
 
-<!-- ===== 4. TYPOGRAPHY ===== -->
-<section class="section section--light">
+<!-- ============================================================
+     SECTION 3: LOGO SYSTEM
+     ============================================================ -->
+<section class="section section-cream">
   <div class="container">
-    <div class="section-label">03 &mdash; Typography</div>
-    <div class="section-title">Type System</div>
-    <div class="type-showcase">
-
-      <div class="type-block">
-        <div class="type-block-label">Primary &mdash; Display / Headings</div>
-        <div class="type-block-name">Cormorant Garamond</div>
-        <div class="type-sample-display" style="font-size: 48px;">Elegant, architectural serif</div>
-        <div class="type-sample-display" style="font-size: 32px; font-style: italic; font-weight: 500;">Rooted in craft. Made to endure.</div>
+    <div class="section-label">02 — Identity</div>
+    <h2>Wordmark System</h2>
+    <div class="identity-row">
+      <div class="identity-card identity-card-dark">
+        <span class="wordmark">AZZOY</span>
       </div>
-
-      <div class="type-block">
-        <div class="type-block-label">Secondary &mdash; Body / UI</div>
-        <div class="type-block-name">Inter</div>
-        <div class="type-sample-body" style="font-size: 18px;">Clean, modern, highly legible. Designed for interfaces and long-form reading at any size.</div>
-        <div class="type-sample-body" style="font-size: 14px; opacity: 0.6;">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+      <div class="identity-card identity-card-light">
+        <span class="wordmark">AZZOY</span>
       </div>
-
-      <div class="type-scale">
-        <div class="type-block-label">Type Scale</div>
-        <div class="type-scale-row">
-          <span class="type-scale-label">Display</span>
-          <span class="type-scale-sample" style="font-size: 48px;">Aa</span>
-          <span style="font-size: 12px; opacity: 0.4;">48px / 700</span>
-        </div>
-        <div class="type-scale-row">
-          <span class="type-scale-label">H1</span>
-          <span class="type-scale-sample" style="font-size: 36px;">Aa</span>
-          <span style="font-size: 12px; opacity: 0.4;">36px / 700</span>
-        </div>
-        <div class="type-scale-row">
-          <span class="type-scale-label">H2</span>
-          <span class="type-scale-sample" style="font-size: 28px;">Aa</span>
-          <span style="font-size: 12px; opacity: 0.4;">28px / 700</span>
-        </div>
-        <div class="type-scale-row">
-          <span class="type-scale-label">H3</span>
-          <span class="type-scale-sample" style="font-size: 22px;">Aa</span>
-          <span style="font-size: 12px; opacity: 0.4;">22px / 700</span>
-        </div>
-        <div class="type-scale-row">
-          <span class="type-scale-label">Body</span>
-          <span class="type-scale-sample" style="font-family: var(--font-body); font-weight: 400; font-size: 16px;">Aa</span>
-          <span style="font-size: 12px; opacity: 0.4;">16px / 400 Inter</span>
-        </div>
-        <div class="type-scale-row">
-          <span class="type-scale-label">Caption</span>
-          <span class="type-scale-sample" style="font-family: var(--font-body); font-weight: 400; font-size: 12px;">Aa</span>
-          <span style="font-size: 12px; opacity: 0.4;">12px / 400 Inter</span>
-        </div>
+      <div class="identity-card identity-card-dark">
+        <svg viewBox="0 0 120 120" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="28" y1="95" x2="60" y2="25" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="92" y1="95" x2="60" y2="25" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="25" y1="95" x2="31" y2="95" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="89" y1="95" x2="95" y2="95" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
       </div>
-
     </div>
+    <p class="identity-note">The wordmark is the primary mark. It appears alone. The monogram is reserved for compact applications — garment labels, social profiles, embossing, envelopes.</p>
   </div>
 </section>
 
-<!-- ===== 5. SOCIAL PROFILE PICTURE ===== -->
-<section class="section section--dark social-section">
+<!-- ============================================================
+     SECTION 4: THE MONOGRAM DETAIL
+     ============================================================ -->
+<section class="section section-dark">
   <div class="container">
-    <div class="section-label">04 &mdash; Social Avatar</div>
-    <div class="section-title">Profile Picture</div>
-    <div class="social-avatar">
-      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="60" r="48" stroke="#f0ebe0" stroke-width="1.5" fill="none"/>
-        <text x="60" y="60" text-anchor="middle" dominant-baseline="central" fill="#f0ebe0" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="48" letter-spacing="0.02em">A</text>
+    <div class="section-label">03 — Monogram</div>
+    <h2>The AZZOY Mark</h2>
+    <div class="monogram-large">
+      <svg viewBox="0 0 120 120" width="160" height="160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="28" y1="95" x2="60" y2="25" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="92" y1="95" x2="60" y2="25" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="25" y1="95" x2="31" y2="95" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="89" y1="95" x2="95" y2="95" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
       </svg>
     </div>
-    <p class="social-note">Minimal. Recognizable at small sizes. No text clutter. The monogram sits inside a thin circle on the brand&rsquo;s dark background&thinsp;&mdash;&thinsp;crisp at 40px, elegant at 400px.</p>
+    <p style="text-align:center;max-width:640px;margin:0 auto;opacity:0.75;font-size:0.92rem;line-height:1.8;">An architectural A, stripped to its essential geometry. Two strokes rising to a single apex — no crossbar. The form references the doorways and passages of Egyptian architecture without resorting to iconography. Small serif notches at the base ground the mark, giving it the weight of a mason's cut. It is not a font glyph — it is a designed mark, bespoke to AZZOY.</p>
   </div>
 </section>
 
-<!-- ===== 6. COLOR SYSTEM ===== -->
-<section class="section section--light">
+<!-- ============================================================
+     SECTION 5: SOCIAL PROFILE PICTURE
+     ============================================================ -->
+<section class="section section-dark" style="padding-top:0;">
   <div class="container">
-    <div class="section-label">05 &mdash; Color System</div>
-    <div class="section-title">Palette</div>
-    <div class="palette-columns">
+    <div class="section-label">04 — Social Avatar</div>
+    <div class="avatar-wrapper">
+      <div class="avatar-box">
+        <svg viewBox="0 0 120 120" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="28" y1="95" x2="60" y2="25" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="92" y1="95" x2="60" y2="25" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="25" y1="95" x2="31" y2="95" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="89" y1="95" x2="95" y2="95" stroke="#f0ebe0" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    <p style="text-align:center;max-width:580px;margin:0 auto;opacity:0.65;font-size:0.88rem;line-height:1.75;">Designed for recognition at every scale. The mark reads clearly at 40px on a phone screen and holds its presence at full resolution. No text, no wordmark, no circle frame — just the mark on darkness.</p>
+  </div>
+</section>
 
-      <div class="palette-group">
-        <div class="palette-title">Brand / Digital</div>
-        <div class="swatches">
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #1a1714;"></div>
-            <span class="swatch-name">Night</span>
-            <span class="swatch-hex">#1a1714</span>
+<!-- ============================================================
+     SECTION 6: TYPOGRAPHY
+     ============================================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-label">05 — Typography</div>
+    <h2>Type System</h2>
+    <div class="type-grid">
+      <div class="type-block">
+        <h3>Display — Cormorant Garamond</h3>
+        <div class="type-sample-display">The quiet confidence of material.</div>
+        <div class="type-weights">
+          <div class="type-weight-row">
+            <span class="type-weight-label">Regular 400</span>
+            <span style="font-family:var(--font-display);font-weight:400;font-size:1.1rem;">AZZOY — Collection One</span>
           </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #c4a882;"></div>
-            <span class="swatch-name">Sandstone</span>
-            <span class="swatch-hex">#c4a882</span>
-          </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #f0ebe0;"></div>
-            <span class="swatch-name">Cream</span>
-            <span class="swatch-hex">#f0ebe0</span>
-          </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #faf7f2;"></div>
-            <span class="swatch-name">Warm White</span>
-            <span class="swatch-hex">#faf7f2</span>
-          </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #e8e0d4;"></div>
-            <span class="swatch-name">Linen</span>
-            <span class="swatch-hex">#e8e0d4</span>
-          </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #3d3832;"></div>
-            <span class="swatch-name">Charcoal</span>
-            <span class="swatch-hex">#3d3832</span>
+          <div class="type-weight-row">
+            <span class="type-weight-label">Bold 700</span>
+            <span style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;letter-spacing:0.35em;">AZZOY</span>
           </div>
         </div>
       </div>
-
-      <div class="palette-group">
-        <div class="palette-title">Collection / Clothing</div>
-        <div class="swatches">
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #c4a882;"></div>
-            <span class="swatch-name">Desert Sand</span>
-            <span class="swatch-hex">#c4a882</span>
+      <div class="type-block">
+        <h3>Body — Inter</h3>
+        <div class="type-sample-body">Egyptian cotton runs through the collection as a material signature — not as a marketing line, but because it is the finest fiber for this climate and this house.</div>
+        <div class="type-weights">
+          <div class="type-weight-row">
+            <span class="type-weight-label">Light 300</span>
+            <span style="font-family:var(--font-body);font-weight:300;font-size:0.95rem;">Nothing unnecessary. Only what matters.</span>
           </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #e8e0d4;"></div>
-            <span class="swatch-name">Bone</span>
-            <span class="swatch-hex">#e8e0d4</span>
+          <div class="type-weight-row">
+            <span class="type-weight-label">Regular 400</span>
+            <span style="font-family:var(--font-body);font-weight:400;font-size:0.95rem;">Nothing unnecessary. Only what matters.</span>
           </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #1a1714;"></div>
-            <span class="swatch-name">Obsidian</span>
-            <span class="swatch-hex">#1a1714</span>
-          </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #b8704a;"></div>
-            <span class="swatch-name">Terracotta</span>
-            <span class="swatch-hex">#b8704a</span>
-          </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #6b6352;"></div>
-            <span class="swatch-name">Olive Stone</span>
-            <span class="swatch-hex">#6b6352</span>
-          </div>
-          <div class="swatch">
-            <div class="swatch-circle" style="background: #faf7f2;"></div>
-            <span class="swatch-name">Ivory</span>
-            <span class="swatch-hex">#faf7f2</span>
+          <div class="type-weight-row">
+            <span class="type-weight-label">Medium 500</span>
+            <span style="font-family:var(--font-body);font-weight:500;font-size:0.95rem;">Nothing unnecessary. Only what matters.</span>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ===== 7. LAUNCH COLLECTION ===== -->
-<section class="section section--cream">
+<!-- ============================================================
+     SECTION 7: COLOR SYSTEM
+     ============================================================ -->
+<section class="section section-cream">
   <div class="container">
-    <div class="section-label">06 &mdash; Launch Collection</div>
-    <div class="section-title">Collection One &mdash; Still Life</div>
-    <div class="collection-grid">
-
-      <div class="piece-card" style="border-left-color: #faf7f2;">
-        <div class="piece-number">Piece 01</div>
-        <div class="piece-name">The Foundation Shirt</div>
-        <div class="piece-desc">Relaxed oversized shirt. The starting point of every outfit.</div>
-        <div class="piece-meta">
-          <span><strong>Fabric:</strong> Egyptian cotton poplin 120s</span>
-          <span><strong>Color:</strong> Ivory</span>
+    <div class="section-label">06 — Color</div>
+    <h2>Color System</h2>
+    <div class="palette-groups">
+      <div>
+        <div class="palette-group-title">Brand / Digital Palette</div>
+        <div class="swatches">
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#1a1714;"></div>
+            <div class="swatch-name">Night</div>
+            <div class="swatch-hex">#1a1714</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#c4a882;"></div>
+            <div class="swatch-name">Sandstone</div>
+            <div class="swatch-hex">#c4a882</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#f0ebe0;"></div>
+            <div class="swatch-name">Cream</div>
+            <div class="swatch-hex">#f0ebe0</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#faf7f2;"></div>
+            <div class="swatch-name">Warm White</div>
+            <div class="swatch-hex">#faf7f2</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#e8e0d4;"></div>
+            <div class="swatch-name">Linen</div>
+            <div class="swatch-hex">#e8e0d4</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#3d3832;"></div>
+            <div class="swatch-name">Charcoal</div>
+            <div class="swatch-hex">#3d3832</div>
+          </div>
         </div>
       </div>
+      <div>
+        <div class="palette-group-title">Collection One — Clothing Palette</div>
+        <div class="swatches">
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#d4c9b5;"></div>
+            <div class="swatch-name">Raw Linen</div>
+            <div class="swatch-hex">#d4c9b5</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#1a1714;"></div>
+            <div class="swatch-name">Kohl</div>
+            <div class="swatch-hex">#1a1714</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#9c6b4a;"></div>
+            <div class="swatch-name">Nile Clay</div>
+            <div class="swatch-hex">#9c6b4a</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#8a7e6d;"></div>
+            <div class="swatch-name">Dusk</div>
+            <div class="swatch-hex">#8a7e6d</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#f0ebe0;"></div>
+            <div class="swatch-name">Alabaster</div>
+            <div class="swatch-hex">#f0ebe0</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#c49a6c;"></div>
+            <div class="swatch-name">Saffron Dust</div>
+            <div class="swatch-hex">#c49a6c</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="piece-card" style="border-left-color: #e8e0d4;">
+<!-- ============================================================
+     SECTION 8: COLLECTION OVERVIEW
+     ============================================================ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-label">07 — Collection One: Passage</div>
+    <h2>October 2026 — Cairo</h2>
+    <p style="opacity:0.75;font-size:0.95rem;line-height:1.8;">Ten pieces for the month Cairo comes alive. Transitional weights, natural fibers, Egyptian cotton as material heritage. From morning to midnight.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9: THE COLLECTION — FULL GRID
+     ============================================================ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-label">08 — The Pieces</div>
+    <h2>Collection One: Passage</h2>
+    <div class="pieces-grid">
+
+      <!-- Piece 01 -->
+      <div class="piece-card" style="border-left-color:#f0ebe0;">
+        <div class="piece-number">Piece 01</div>
+        <div class="piece-name">The Cairo Shirt</div>
+        <div class="piece-description">Relaxed button-down with a soft spread collar and slightly dropped shoulder. The everyday foundation.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Egyptian Giza 88 cotton poplin, 100s two-ply</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Alabaster</div>
+        <div class="piece-role">The entry point — what someone reaches for every morning. Must be perfect.</div>
+      </div>
+
+      <!-- Piece 02 -->
+      <div class="piece-card" style="border-left-color:#d4c9b5;">
         <div class="piece-number">Piece 02</div>
         <div class="piece-name">The Column Trouser</div>
-        <div class="piece-desc">Wide straight-leg trouser. Clean vertical line, relaxed drape.</div>
-        <div class="piece-meta">
-          <span><strong>Fabric:</strong> Washed cotton twill 280gsm</span>
-          <span><strong>Color:</strong> Bone</span>
-        </div>
+        <div class="piece-description">High-waisted wide-leg trouser with a single front pleat. Falls straight, no taper.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Brushed Egyptian cotton twill, 260gsm</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Raw Linen</div>
+        <div class="piece-role">Anchors every outfit. Pairs with every top in the collection.</div>
       </div>
 
-      <div class="piece-card" style="border-left-color: #c4a882;">
+      <!-- Piece 03 -->
+      <div class="piece-card" style="border-left-color:#8a7e6d;">
         <div class="piece-number">Piece 03</div>
-        <div class="piece-name">The Desert Overshirt</div>
-        <div class="piece-desc">Structured overshirt, light jacket weight. Layering essential.</div>
-        <div class="piece-meta">
-          <span><strong>Fabric:</strong> Cotton-linen canvas</span>
-          <span><strong>Color:</strong> Sandstone</span>
-        </div>
+        <div class="piece-name">The Passage Jacket</div>
+        <div class="piece-description">Unstructured blazer with a soft shoulder, patch pockets, no lining. Relaxed tailoring.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Cotton-linen hopsack, open weave</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Dusk</div>
+        <div class="piece-role">The October piece — light enough for warm days, structured enough for evening. The collection's centerpiece.</div>
       </div>
 
-      <div class="piece-card" style="border-left-color: #1a1714;">
+      <!-- Piece 04 -->
+      <div class="piece-card" style="border-left-color:#1a1714;">
         <div class="piece-number">Piece 04</div>
-        <div class="piece-name">The Draped Tee</div>
-        <div class="piece-desc">Heavyweight relaxed tee. Substantial hand-feel, quiet presence.</div>
-        <div class="piece-meta">
-          <span><strong>Fabric:</strong> Egyptian cotton jersey 240gsm</span>
-          <span><strong>Color:</strong> Obsidian</span>
-        </div>
+        <div class="piece-name">The Weight Tee</div>
+        <div class="piece-description">Oversized tee with dropped shoulder and raw-edge hem. Substantial, not thin.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Egyptian cotton jersey, 260gsm compact-spun</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Kohl</div>
+        <div class="piece-role">The piece that proves the brand. A tee this good at this weight signals intent.</div>
       </div>
 
-      <div class="piece-card" style="border-left-color: #b8704a;">
+      <!-- Piece 05 -->
+      <div class="piece-card" style="border-left-color:#9c6b4a;">
         <div class="piece-number">Piece 05</div>
-        <div class="piece-name">The Evening Knit</div>
-        <div class="piece-desc">Fine-gauge crew neck sweater. Refined, warm-weather knit.</div>
-        <div class="piece-meta">
-          <span><strong>Fabric:</strong> Egyptian cotton knit</span>
-          <span><strong>Color:</strong> Terracotta</span>
-        </div>
+        <div class="piece-name">The Nile Knit</div>
+        <div class="piece-description">Fine-gauge crew neck with ribbed hem and cuffs. Lightweight enough for Cairo evenings.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Egyptian Giza 45 cotton knit, 14-gauge</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Nile Clay</div>
+        <div class="piece-role">Evening layer. Worn alone or under the jacket. Adds warmth and color depth.</div>
       </div>
 
-      <div class="piece-card" style="border-left-color: #6b6352;">
+      <!-- Piece 06 -->
+      <div class="piece-card" style="border-left-color:#1a1714;">
         <div class="piece-number">Piece 06</div>
-        <div class="piece-name">The Architect Coat</div>
-        <div class="piece-desc">Unlined duster coat, knee-length. Structured silhouette, effortless weight.</div>
-        <div class="piece-meta">
-          <span><strong>Fabric:</strong> Cotton-linen blend</span>
-          <span><strong>Color:</strong> Olive Stone</span>
-        </div>
+        <div class="piece-name">The Atelier Coat</div>
+        <div class="piece-description">Knee-length unlined coat with a hidden placket, notch lapel, and deep side vents. Architectural.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Cotton-wool gabardine, 300gsm</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Kohl</div>
+        <div class="piece-role">The statement. Draped over shoulders at a gallery opening or worn walking through Zamalek at night. Authority without volume.</div>
       </div>
 
-      <div class="piece-card" style="border-left-color: #c4a882;">
+      <!-- Piece 07 -->
+      <div class="piece-card" style="border-left-color:#c49a6c;">
         <div class="piece-number">Piece 07</div>
-        <div class="piece-name">The Essential Short</div>
-        <div class="piece-desc">Tailored mid-length short. Sharp enough for evening, easy enough for day.</div>
-        <div class="piece-meta">
-          <span><strong>Fabric:</strong> Cotton twill</span>
-          <span><strong>Color:</strong> Desert Sand</span>
-        </div>
+        <div class="piece-name">The Draft Overshirt</div>
+        <div class="piece-description">Boxy overshirt with chest patch pocket and buttoned cuffs. Layering bridge.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Washed cotton canvas, 240gsm</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Saffron Dust</div>
+        <div class="piece-role">Bridges tee and jacket. Casual enough for day, refined enough for an easy dinner.</div>
       </div>
 
-      <div class="piece-card" style="border-left-color: #f0ebe0;">
+      <!-- Piece 08 -->
+      <div class="piece-card" style="border-left-color:#f0ebe0;">
         <div class="piece-number">Piece 08</div>
-        <div class="piece-name">The Ritual Scarf</div>
-        <div class="piece-desc">Large rectangular wrap scarf. The finishing gesture.</div>
-        <div class="piece-meta">
-          <span><strong>Fabric:</strong> Cotton-cashmere blend</span>
-          <span><strong>Color:</strong> Cream</span>
-        </div>
+        <div class="piece-name">The Ease Trouser</div>
+        <div class="piece-description">Drawstring-waist tapered trouser with elasticated back. Relaxed but clean.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Washed cotton-linen blend, 200gsm</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Alabaster</div>
+        <div class="piece-role">The relaxed pair. For days that don't need structure but still need to look right.</div>
+      </div>
+
+      <!-- Piece 09 -->
+      <div class="piece-card" style="border-left-color:#8a7e6d;">
+        <div class="piece-number">Piece 09</div>
+        <div class="piece-name">The Terrace Polo</div>
+        <div class="piece-description">Long-sleeve polo with a three-button placket and ribbed collar. Refined, not sporty.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Egyptian cotton piqu&eacute;, 220gsm</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Dusk</div>
+        <div class="piece-role">Fills the gap between tee and shirt. For Friday dinners at the Gezira Club.</div>
+      </div>
+
+      <!-- Piece 10 -->
+      <div class="piece-card" style="border-left-color:#c49a6c;">
+        <div class="piece-number">Piece 10</div>
+        <div class="piece-name">The Fold Scarf</div>
+        <div class="piece-description">Oversized rectangular scarf, 70&times;200cm. Draped, wrapped, or carried.</div>
+        <div class="piece-detail"><span class="piece-detail-label">Fabric:</span> Egyptian cotton-cashmere twill, 180gsm</div>
+        <div class="piece-detail"><span class="piece-detail-label">Color:</span> Saffron Dust</div>
+        <div class="piece-role">The finishing gesture. Adds texture and warmth for October evenings. Signature piece for social media imagery.</div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ===== 8. COLLECTION RATIONALE ===== -->
-<section class="section section--dark">
+<!-- ============================================================
+     SECTION 10: COLLECTION RATIONALE
+     ============================================================ -->
+<section class="section section-dark">
   <div class="container">
-    <div class="section-label">07 &mdash; Rationale</div>
-    <div class="section-title">Why These Eight Pieces</div>
-    <div class="rationale-text">
-      Eight pieces. Every item earns its place. The collection offers top-to-bottom dressing&thinsp;&mdash;&thinsp;warm-weather suited for an Egyptian summer launch. All-natural fibers throughout. Egyptian cotton is the throughline, connecting the brand to its origin without clich&eacute;. Silhouettes are relaxed but structured. Nothing overstyled. The collection works as separates and as a full wardrobe.
+    <div class="section-label">09 — Rationale</div>
+    <h2>Why These Ten</h2>
+    <p class="rationale-text">Ten pieces. Each one earned its position. Collection One: Passage is built for October in Cairo — the month the city exhales. Days are still warm, evenings turn cool, and the social calendar opens. The collection moves from morning to midnight: a cotton poplin shirt for a slow breakfast in Zamalek, a fine-gauge knit for dinner on a Nile terrace, a gabardine coat draped over shoulders at a gallery in Downtown. Every fabric is natural. Egyptian cotton runs through the collection as a material signature — not as a marketing line, but because it is the finest fiber for this climate and this house. Silhouettes are relaxed but precise. No piece is decorative. Nothing is unnecessary.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 11: SLOGAN & BIO
+     ============================================================ -->
+<section class="section section-light" style="text-align:center;">
+  <div class="container">
+    <div class="section-label">10 — Voice</div>
+    <div class="slogan-display">Nothing unnecessary.</div>
+    <div class="divider"></div>
+    <div class="bio-card">
+      <div class="bio-card-brand">AZZOY</div>
+      <div class="bio-card-slogan">Nothing unnecessary.</div>
+      <div class="bio-card-location">Cairo — azzoy.com</div>
     </div>
   </div>
 </section>
 
-<!-- ===== 9. SLOGAN & BIO ===== -->
-<section class="section section--light" style="text-align: center;">
-  <div class="container">
-    <div class="section-label">08 &mdash; Slogan &amp; Bio</div>
-    <div class="slogan-card">
-      <div class="slogan-text">&ldquo;Rooted in craft. Made to endure.&rdquo;</div>
-      <div class="divider" style="margin: 32px auto;"></div>
-      <div class="bio-label">Instagram Bio</div>
-      <div class="bio-text">AZZOY &mdash; Quiet luxury from Egypt.<br>Rooted in craft. Made to endure.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 10. FOOTER ===== -->
+<!-- ============================================================
+     SECTION 12: FOOTER
+     ============================================================ -->
 <footer class="footer">
-  AZZOY &copy; 2026 &mdash; Confidential
+  AZZOY &copy; 2026 — Confidential
 </footer>
 
 </body>
